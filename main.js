@@ -1,70 +1,91 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('contactForm');
-    const nameInput = document.getElementById('name');
-    const emailInput = document.getElementById('email');
-    const messageInput = document.getElementById('message');
+document.addEventListener("DOMContentLoaded", function () {
+  const form = document.getElementById("contactForm");
+  const nameInput = document.getElementById("name");
+  const emailInput = document.getElementById("email");
+  const messageInput = document.getElementById("message");
+  const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
+  const mobileMenu = document.querySelector(".mobile-menu");
 
-    nameInput.addEventListener('blur', validateName);
-    emailInput.addEventListener('blur', validateEmail);
-    messageInput.addEventListener('blur', validateMessage);
+  // Mobile menu toggle
+  mobileMenuToggle.addEventListener("click", function () {
+    mobileMenu.classList.toggle("active");
+    mobileMenuToggle.textContent = mobileMenu.classList.contains("active")
+      ? "✕"
+      : "☰";
+    mobileMenuToggle.setAttribute(
+      "aria-expanded",
+      mobileMenu.classList.contains("active")
+    );
+  });
 
-    form.addEventListener('submit', function(event) {
-        event.preventDefault();
+  // Form validation
+  nameInput.addEventListener("input", validateName);
+  emailInput.addEventListener("input", validateEmail);
+  messageInput.addEventListener("input", validateMessage);
 
-        const isNameValid = validateName();
-        const isEmailValid = validateEmail();
-        const isMessageValid = validateMessage();
+  form.addEventListener("click", function (event) {
+    if (event.target.classList.contains("button")) {
+      event.preventDefault();
 
-        if (isNameValid && isEmailValid && isMessageValid) {
-            form.reset();
-            clearErrors();
-        }
+      const isNameValid = validateName();
+      const isEmailValid = validateEmail();
+      const isMessageValid = validateMessage();
+
+      if (isNameValid && isEmailValid && isMessageValid) {
+        alert("Message sent successfully!"); // Replace with actual submission logic
+        form.reset();
+        clearErrors();
+      }
+    }
+  });
+
+  function clearErrors() {
+    const formGroups = form.querySelectorAll(".form-group");
+    formGroups.forEach((group) => {
+      group.classList.remove("error");
     });
+  }
 
-    function clearErrors() {
-        const formGroups = form.querySelectorAll('.form-group');
-        formGroups.forEach(group => {
-            group.classList.remove('error');
-        });
+  function validateName() {
+    const nameValue = nameInput.value.trim();
+    const formGroup = nameInput.parentElement;
+
+    if (nameValue.length < 4) {
+      formGroup.classList.add("error");
+      return false;
+    } else {
+      formGroup.classList.remove("error");
+      return true;
     }
+  }
 
-    function validateName() {
-        const nameValue = nameInput.value.trim();
-        const formGroup = nameInput.parentElement;
+  function validateEmail() {
+    const emailValue = emailInput.value.trim();
+    const formGroup = emailInput.parentElement;
+    const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-        if (nameValue.length < 3) {
-            formGroup.classList.add('error');
-            return false;
-        } else {
-            formGroup.classList.remove('error');
-            return true;
-        }
+    if (!emailPattern.test(emailValue)) {
+      formGroup.classList.add("error");
+      return false;
+    } else {
+      formGroup.classList.remove("error");
+      return true;
     }
+  }
 
-    function validateEmail() {
-        const emailValue = emailInput.value.trim();
-        const formGroup = emailInput.parentElement;
-        const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  function validateMessage() {
+    const messageValue = messageInput.value.trim();
+    const formGroup = messageInput.parentElement;
+    const wordCount = messageValue
+      .split(/\s+/)
+      .filter((word) => word.length > 0).length;
 
-        if (!emailPattern.test(emailValue)) {
-            formGroup.classList.add('error');
-            return false;
-        } else {
-            formGroup.classList.remove('error');
-            return true;
-        }
+    if (wordCount < 10) {
+      formGroup.classList.add("error");
+      return false;
+    } else {
+      formGroup.classList.remove("error");
+      return true;
     }
-
-    function validateMessage() {
-        const messageValue = messageInput.value.trim();
-        const formGroup = messageInput.parentElement;
-
-        if (messageValue.length < 10) {
-            formGroup.classList.add('error');
-            return false;
-        } else {
-            formGroup.classList.remove('error');
-            return true;
-        }
-    }
+  }
 });

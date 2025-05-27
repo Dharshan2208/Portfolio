@@ -3,9 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Projects - H Dharshan</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    Will be working on it shortly............
+    <header>
+        <div class="container nav-container">
+            <div class="logo">
+                <a href="index.html">H Dharshan</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <button class="mobile-menu-toggle" aria-label="Toggle mobile menu" aria-expanded="false">☰</button>
+        </div>
+        <div class="mobile-menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </header>
+
+    <section class="featured-projects">
+        <div class="container">
+            <div class="featured-projects__header">
+                <h2>All Projects</h2>
+                <p>A showcase of my web development projects, built with modern technologies and creative solutions.</p>
+                <a href="index.html" class="see-all-button" aria-label="Back to home">
+                    Back to Home
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M15 18l-6-6 6-6" />
+                    </svg>
+                </a>
+            </div>
+            <div class="projects-list">
+                <div class="project-item">
+                    <div class="project-image">
+                        <img src="assets/exam-genius.jpg" alt="Exam Genius project screenshot">
+                    </div>
+                    <div class="project-details">
+                        <div class="project-year-type">2025 • Hackathon</div>
+                        <h3 class="project-title">Exam Genius</h3>
+                        <div class="project-tech">
+                            <span>TypeScript</span>
+                            <span>Python</span>
+                            <span>FastAPI</span>
+                            <span>AI Integrations</span>
+                        </div>
+                        <p class="project-description">
+                            ExamGenius is a full-stack web application designed to assist students in preparing for exams by leveraging AI to generate syllabi, find relevant resources, and create personalized study plans.
+                        </p>
+                        <a href="#" class="project-link" aria-label="View Exam Genius project">View Project</a>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="project-image">
+                        <img src="assets/flix-together.jpg" alt="Flix Together project screenshot">
+                    </div>
+                    <div class="project-details">
+                        <div class="project-year-type">2025 • Hackathon</div>
+                        <h3 class="project-title">Flix Together</h3>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Appwrite</span>
+                            <span>TMDb API</span>
+                            <span>AI Integration</span>
+                        </div>
+                        <p class="project-description">
+                            Flix Together is a full-stack web application that helps groups decide what to watch by using AI to generate personalized movie recommendations based on members' preferences and viewing history.
+                        </p>
+                        <a href="#" class="project-link" aria-label="View Flix Together project">View Project</a>
+                    </div>
+                </div>
+                <div class="project-item">
+                    <div class="project-image">
+                        <img src="assets/portfolio.jpg" alt="Portfolio project screenshot">
+                    </div>
+                    <div class="project-details">
+                        <div class="project-year-type">2025 • Personal</div>
+                        <h3 class="project-title">Portfolio</h3>
+                        <div class="project-tech">
+                            <span>HTML</span>
+                            <span>CSS</span>
+                            <span>JavaScript</span>
+                        </div>
+                        <p class="project-description">
+                            My personal portfolio website showcasing my skills, projects, and contact information with a clean and modern design.
+                        </p>
+                        <a href="#" class="project-link" aria-label="View Portfolio project">View Project</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="main.js"></script>
 </body>
 </html>
