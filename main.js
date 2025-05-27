@@ -6,6 +6,26 @@ document.addEventListener("DOMContentLoaded", function () {
   const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
   const mobileMenu = document.querySelector(".mobile-menu");
 
+  // Modal logic
+  const contactModal = document.getElementById("contactModal");
+  const openModalBtn = document.querySelector(".contact-button");
+  const closeModalBtn = document.getElementById("closeModal");
+
+  openModalBtn.addEventListener("click", (e) => {
+    e.preventDefault();
+    contactModal.style.display = "block";
+  });
+
+  closeModalBtn.addEventListener("click", () => {
+    contactModal.style.display = "none";
+  });
+
+  window.addEventListener("click", (e) => {
+    if (e.target === contactModal) {
+      contactModal.style.display = "none";
+    }
+  });
+
   // Mobile menu toggle
   mobileMenuToggle.addEventListener("click", function () {
     mobileMenu.classList.toggle("active");
