@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
       const isMessageValid = validateMessage();
 
       if (isNameValid && isEmailValid && isMessageValid) {
-        alert("Message sent successfully!"); // Replace with actual submission logic
+        alert("Message sent successfully!");
         form.reset();
         clearErrors();
       }
