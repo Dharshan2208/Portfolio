@@ -547,7 +547,7 @@ main p {
     transform: translateX(3px);
 }
 
-/* New Contact Styles */
+/* Contact Styles */
 .contact {
     background-color: var(--bg-secondary);
     padding: 4rem 0;
@@ -597,11 +597,11 @@ main p {
     transition: background-color 0.3s ease;
 }
 
-.primary-contact-button:hover {
+.contact-button:hover {
     background-color: var(--primary-hover);
 }
 
-.primary-contact-button i {
+.contact-button i {
     margin-right: 0.5rem;
 }
 
@@ -794,7 +794,7 @@ main p {
     font-size: 1.1rem;
 }
 
-/* Media Queries */
+/* Tablets (max-width: 1024px) */
 @media (max-width: 1024px) {
     .projects-list {
         grid-template-columns: 1fr;
@@ -805,6 +805,7 @@ main p {
     }
 }
 
+/* Medium devices (max-width: 768px) */
 @media (max-width: 768px) {
     main h1 {
         font-size: 2rem;
@@ -812,6 +813,18 @@ main p {
 
     main h2 {
         font-size: 1.5rem;
+    }
+
+    nav ul {
+        display: none;
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    .mobile-menu {
+        display: block;
     }
 
     .profile-container {
@@ -833,20 +846,9 @@ main p {
     .skills-section h3::before {
         display: none;
     }
-
-    nav ul {
-        display: none;
-    }
-
-    .mobile-menu-toggle {
-        display: block;
-    }
-
-    .mobile-menu {
-        display: block;
-    }
 }
 
+/* Smartphones (max-width: 576px) */
 @media (max-width: 576px) {
     .container {
         padding: 0 15px;
@@ -869,6 +871,18 @@ main p {
         height: 160px;
     }
 
+    .profile-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .button,
+    .contact-button,
+    .see-all-button {
+        width: 100%;
+        text-align: center;
+    }
+
     .project-details {
         padding: 1rem;
     }
@@ -877,16 +891,64 @@ main p {
         font-size: 1.3rem;
     }
 
-    .contact__header h2 {
+    .project-item,
+    .skill-card {
+        padding: 1.2rem 1rem;
+    }
+
+    .skills-grid,
+    .projects-list {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .profile-content h2 {
+        font-size: 1.25rem;
+        animation: none;
+        border: none;
+        white-space: normal;
+        width: auto;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        font-size: 0.95rem;
+    }
+
+    .social-links {
+        gap: 0.75rem;
+        justify-content: center;
+    }
+
+    .email-link {
+        font-size: 0.9rem;
+    }
+
+    .contact-header h2 {
         font-size: 1.75rem;
     }
 
     .contact__content {
         grid-template-columns: 1fr;
     }
+}
 
-    .button {
-        width: 100%;
+/* Extra Small (max-width: 360px) */
+@media (max-width: 360px) {
+    main h1 {
+        font-size: 1.5rem;
+    }
+
+    main h2 {
+        font-size: 1rem;
+    }
+
+    .project-title {
+        font-size: 1.1rem;
+    }
+
+    .skill-card span {
+        font-size: 0.9rem;
     }
 }
 
