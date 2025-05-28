@@ -174,7 +174,76 @@ main h2 {
     margin-bottom: 2rem;
 }
 
-.profile-content h2{
+
+main p {
+    margin-bottom: 1.5rem;
+    max-width: 65ch;
+    color: var(--text-tertiary);
+    font-size: 1rem;
+}
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg-color);
+    scroll-snap-align: start;
+    padding-top: 70px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+section {
+    scroll-snap-align: start;
+}
+
+/* Scroll Arrow */
+.scroll-down {
+    margin-top: 8rem;
+    text-align: center;
+}
+
+.scroll-down a {
+    font-size: 2rem;
+    color: var(--primary-color);
+    animation: bounce 2s infinite;
+    display: inline-block;
+    transition: color 0.3s ease;
+}
+
+.scroll-down a:hover {
+    color: var(--primary-hover);
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+
+/* Profile */
+.profile-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.profile-content {
+    flex: 1;
+}
+
+.profile-content h2 {
     overflow: hidden;
     white-space: nowrap;
     border-right: 2px solid var(--text-secondary);
@@ -199,25 +268,7 @@ main h2 {
 @keyframes blink {
     50% {
         border-color: transparent;
-    } }
-
-main p {
-    margin-bottom: 1.5rem;
-    max-width: 65ch;
-    color: var(--text-tertiary);
-    font-size: 1rem;
-}
-
-/* Profile */
-.profile-container {
-    display: flex;
-    align-items: flex-start;
-    gap: 2rem;
-    margin-bottom: 4rem;
-}
-
-.profile-content {
-    flex: 1;
+    }
 }
 
 .profile-image {
@@ -278,6 +329,7 @@ main p {
     color: #000;
     border-color: var(--primary-color); }
 
+/* About Me */
 .about-section {
     background-color: var(--bg-color);
     padding: 4rem 0;
