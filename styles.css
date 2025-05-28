@@ -161,7 +161,7 @@ nav ul li a:focus::after {
 }
 
 main h1 {
-    font-size: 2.5rem;
+    font-size: 3.5rem;
     font-weight: 700;
     color: var(--text-main);
     margin-bottom: 0.5rem;
@@ -272,8 +272,8 @@ section {
 }
 
 .profile-image {
-    width: 250px;
-    height: 250px;
+    width: 300px;
+    height: 300px;
     border-radius: 50%;
     background-color: #2a2a2a;
     border: 3px solid var(--primary-color);
@@ -281,8 +281,6 @@ section {
     align-items: center;
     justify-content: center;
     overflow: hidden;
-    margin-top: 2rem;
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
     transition: var(--transition);
 }
 
@@ -298,7 +296,7 @@ section {
 }
 
 .profile-buttons {
-    margin-top: 1.5rem;
+    margin-top: 2rem;
     display: flex;
     gap: 1rem;
     flex-wrap: wrap;
