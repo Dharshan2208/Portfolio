@@ -100,7 +100,7 @@ nav ul li a:focus::after {
 /* Mobile Menu Toggle Button */
 .mobile-menu-toggle {
     display: none;
-    background: none;
+    background: rgba(var(--bg-secondary), 0.95);
     border: none;
     color: var(--text-main);
     font-size: 1.9rem;
@@ -121,7 +121,7 @@ nav ul li a:focus::after {
     left: 0;
     width: 100vw;
     height: 0;
-    background-color: rgba(var(--bg-secondary-rgb), 0.95);
+    background-color: rgba(var(--bg-secondary), 0.95);
     overflow-y: auto;
     transition: height 0.4s ease, opacity 0.4s ease, transform 0.4s ease;
     opacity: 0;
