@@ -17,7 +17,13 @@
 }
 
 body {
-    font-family: "Source Sans 3 Variable", ui-sans-serif, system-ui, sans-serif;
+    font-family: SFMono-Regular,
+        Menlo,
+        Monaco,
+        Consolas,
+        "Liberation Mono",
+        "Courier New",
+        monospace;
     background-color: var(--bg-color);
     color: var(--text-main);
     line-height: 1.6;
