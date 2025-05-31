@@ -931,6 +931,11 @@ section {
     font-size: 1.1rem;
 }
 
+.footer .social-button{
+    border: none;
+    background-color: var(--bg-color);
+}
+
 /* Animations */
 @keyframes fadeIn {
     from {
