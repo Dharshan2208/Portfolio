@@ -253,6 +253,7 @@ section {
     overflow: hidden;
     white-space: nowrap;
     border-right: 2px solid var(--text-secondary);
+    font-weight: 500;
 
     /* Typing effect */
     width: 0;
@@ -266,7 +267,7 @@ section {
     }
 
     to {
-        width: 31ch;
+        width: 35ch;
     }
 }
 
