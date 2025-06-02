@@ -261,6 +261,15 @@ section {
 
 }
 
+/* Gradient text effect */
+.profile-content h1,
+.profile-content h2,
+.profile-content p {
+    background: linear-gradient(to right, #7d7d7d, #c0c0c0, #ffffff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 @keyframes typing {
     from {
         width: 0;
@@ -289,15 +298,6 @@ section {
     overflow: hidden;
     transition: var(--transition);
     opacity: 80%;
-}
-
-/* Gradient text effect */
-.profile-content h1,
-.profile-content h2,
-.profile-content p {
-    background: linear-gradient(to right, #7d7d7d, #c0c0c0, #ffffff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
 }
 
 .profile-image:hover {
