@@ -176,13 +176,21 @@
 
     \vspace{0.3 cm - 0.3 cm}
 
+    \section{Summary}
+\begin{onecolentry}
+Ambitious Computer Science undergraduate skilled in full-stack development, AI, and machine learning.
+Proven track record of delivering innovative projects at hackathons and in collaborative teams.
+Passionate about building scalable solutions using modern web and AI technologies.
+\end{onecolentry}
+
+
     \section{Education}
 
         \begin{twocolentry}{
 
 
         \textit{Aug 2024 – Aug 2028}}
-            \textbf{Amrita Vishwa Vidyapeetham,Coimbatore}
+            \textbf{Amrita Vishwa Vidyapeetham, Coimbatore}
 
             \textit{B.Tech in Computer Science}
         \end{twocolentry}
@@ -196,39 +204,34 @@
         \section{Experience}
 \textbf{Hackathon Experience} \hfill \textit{Jan 2025 – Apr 2025}
 \begin{itemize}[itemsep=0pt, topsep=0pt, parsep=0pt, partopsep=0pt, leftmargin=*]
-    \item Participated in 5 hackathons (2 national, 3 college-level), building innovative solutions in AI, web development, and deep learning under intense 12–48 hour sprints.
-    \item Won 1st place at Hack101 for developing \textit{FlixTogether}, a full stack group movie recommendation platform with a weighted consensus algorithm.
-    \item Collaborated in diverse teams, gaining hands-on experience with React, Node.js, Express, MongoDB, TensorFlow, and real-time API integrations.
+    \item Participated in 5 hackathons (2 national, 3 college-level),building innovative solutions in AI, web development, and deep learning during intense 12–48 hour sprints.
+    \item Collaborated in diverse teams, gaining hands-on experience with React, Node.js, Express, MongoDB, and real-time API integrations.
 \end{itemize}
 
 
 \section{Projects}
 \textbf{FlixTogether:} \textit{React.js, Express.js, AppWrite, IMDb API, Vercel (Mar 2025)} \hfill \href{https://github.com/Dharshan2208/FlixTogether}{GitHub Repository}
 \begin{itemize}[itemsep=0pt, topsep=0pt, parsep=0pt, partopsep=0pt, leftmargin=*]
-    \item Designed a collaborative movie recommendation platform that analyzes group preferences using a proprietary weighted consensus algorithm, solving the common problem ``what to watch together''.
-    \item Developed during Hack101 in a team of three, where the project won 1st place for innovation and technical execution.
+    \item Designed a collaborative movie recommendation platform that analyzes group preferences using a proprietary weighted consensus algorithm to solve the common problem: What to watch together?
+    \item Developed during Hack101 in a team of three; the project won 1st place for innovation and technical execution.
     \item Architected a scalable full-stack solution with the React.js/Vite front-end and Express.js back-end, implementing RESTful APIs and real-time data synchronization with AppWrite for trending movies.
 \end{itemize}
 \vspace{0.2cm}
 
 \textbf{ExamGenius:} \textit{React.js, Express.js, Gemini-API, Groq, Tavilly (Mar 2025)} \hfill \href{https://github.com/Dharshan2208/ExamGenius}{GitHub Repository}
 \begin{itemize}[itemsep=0pt, topsep=0pt, parsep=0pt, partopsep=0pt, leftmargin=*]
-    \item Developed an intelligent educational platform leveraging Google's Gemini AI to automatically generate personalized study plans, curated learning resources, and contextually relevant practice materials, reducing study preparation time by 80\% for students.
-    \item Created collaboratively during a group hackathon focused on AI-driven education tools, showcasing integration of multiple AI APIs and a scalable backend.
+    \item Built an intelligent educational platform using Google Gemini AI to automatically generate personalized study plans, curated learning resources, and contextually relevant practice materials, reducing the study preparation time by 80\% for students.
+    \item Created collaboratively during a group hackathon focused on AI-driven educational tools, showcasing the integration of multiple AI APIs and a scalable back-end.
     \item Implemented secure user authentication and session management using JWT tokens with Express.js backend, featuring role-based access control and encrypted data transmission for institutional compliance.
 \end{itemize}
 \vspace{0.2cm}
 
-\textbf{Symbol Classifier:} \textit{Python, PyTorch, TensorFlow, CNN, Jupyter Notebook (Mar 2025)} \hfill \href{https://github.com/Dharshan2208/Symbol-Classifier}{GitHub Repository}
+\textbf{Symbol Classifier:} \textit{Python, PyTorch, CNN, Jupyter Notebook (Mar 2025)} \hfill \href{https://github.com/Dharshan2208/Symbol-Classifier}{GitHub Repository}
 \begin{itemize}[itemsep=0pt, topsep=0pt, parsep=0pt, partopsep=0pt, leftmargin=*]
-    \item Trained a Convolutional Neural Network model to classify handwritten mathematical symbols achieving 86\%+ accuracy using TensorFlow and custom dataset preprocessing techniques.
-    \item Built in a collaborative team setting during a hackathon focused on computer vision and deep learning.
-    \item Implemented data augmentation strategies and hyperparameter optimization to improve model performance and reduce overfitting on the training dataset.
-    \item Analyzed model performance using Matplotlib for training visualization, tracking accuracy and loss metrics across multiple training epochs to evaluate convergence.
+    \item Trained a Convolutional Neural Network to classify handwritten mathematical symbols with 86\% + precision using TensorFlow and custom dataset preprocessing.
+    \item Implemented data augmentation and hyperparameter optimization to improve model performance and reduce overfitting.
+    \item Our team formulated the model during a hackathon focused on computer vision and deep learning, and analyzed the training progress using Matplotlib visualizations that tracked accuracy and loss across epochs.
 \end{itemize}
-
-
-
 
 
     \section{Skill Set}
@@ -253,7 +256,7 @@
 \vspace{0.2 cm}
 
 \begin{onecolentry}
-    \textbf{Tools:} Git, GitHub, Linux, Chrome Dev Tools, Figma, VS Code
+    \textbf{Tools:} Git, GitHub, Linux, Figma, VS Code, Da Vinci Resolve
 \end{onecolentry}
 
 
