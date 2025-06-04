@@ -790,21 +790,6 @@ section {
     border-color: var(--primary-color);
 }
 
-.email-link {
-    font-size: 0.95rem;
-    color: var(--text-secondary);
-}
-
-.email-link a {
-    color: #00cfff;
-    font-weight: 500;
-    text-decoration: none;
-}
-
-.email-link a:hover {
-    color: var(--primary-hover);
-}
-
 /* Form Message */
 .form-group {
     margin-bottom: 1.5rem;
