@@ -190,16 +190,15 @@
         \vspace{0.10 cm}
         \begin{onecolentry}
             \begin{highlights}
-                \item GPA: 8.68
+                \item CGPA: 8.68
             \end{highlights}
         \end{onecolentry}
-        \section{Experience}
 
 \section{Projects}
 \textbf{FlixTogether:} \textit{React.js, Express.js, MongoDB, IMDb API, Vercel (Apr 2025)} \hfill \href{https://github.com/Dharshan2208/FlixTogether}{GitHub Repository}
 \begin{itemize}
-    \item Engineered a collaborative movie recommendation platform that analyzes group preferences through a proprietary weighted consensus algorithm, solving the common ``what to watch together'' problem for 100+ concurrent users.
-    \item Architected a scalable full-stack solution with React.js/Vite frontend and Express.js backend, implementing RESTful APIs and real-time data synchronization with MongoDB for user preference storage.
+    \item Engineered a collaborative movie recommendation platform that analyzes group preferences through a proprietary weighted consensus algorithm, solving the common ``what to watch together'' problem.
+    \item Architected a scalable full-stack solution with React.js/Vite frontend and Express.js backend, implementing RESTful APIs and real-time data synchronization with AppWrite for trending movies.
 \end{itemize}
 \vspace{0.2cm}
 
@@ -223,7 +222,7 @@
 
 
 \begin{onecolentry}
-    \textbf{Programming Languages:} C, C++, Python, Java, JavaScript
+    \textbf{Programming Languages:} C, Python, Java, JavaScript
 \end{onecolentry}
 
 \vspace{0.2 cm}
@@ -241,7 +240,7 @@
 \vspace{0.2 cm}
 
 \begin{onecolentry}
-    \textbf{Tools:} Git, GitHub, Linux, Postman, Chrome Dev Tools, Figma, VS Code
+    \textbf{Tools:} Git, GitHub, Linux, Chrome Dev Tools, Figma, VS Code
 \end{onecolentry}
 
 

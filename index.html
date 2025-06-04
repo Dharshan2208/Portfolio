@@ -302,23 +302,23 @@
 
             <div class="project-item">
               <div class="project-image">
-                <img src="images/portfolio.png" alt="Portfolio" />
+                  <img src="images/symbol.png" alt="Symbol Classifier project screenshot">
               </div>
               <div class="project-details">
-                <div class="project-year-type">2025 • Personal</div>
-                <h3 class="project-title">Portfolio</h3>
-                <div class="project-tech">
-                  <span>HTML</span>
-                  <span>CSS</span>
-                  <span>JavaScript</span>
-                </div>
-                <p class="project-description">My personal portfolio website</p>
-                <a
-                  href="https://github.com/Dharshan2208/Portfolio"
-                  class="project-link"
-                  >View Project</a
-                >
+                  <div class="project-year-type">2024 • Personal Project</div>
+                  <h3 class="project-title">Symbol Classifier</h3>
+                  <div class="project-tech">
+                      <span>Python</span>
+                      <span>TensorFlow</span>
+                      <span>NumPy</span>
+                      <span>ML</span>
+                  </div>
+                  <p class="project-description">
+                      Symbol Classifier is a machine learning project that uses a Convolutional Neural Network (CNN) to classify hand-drawn symbols. It processes image datasets, trains a deep learning model using TensorFlow, and visualizes predictions and training accuracy.
+                  </p>
+                  <a href="https://github.com/Dharshan2208/Symbol-Classifier" class="project-link" aria-label="View Symbol Classifier project" target="_blank">View Project</a>
               </div>
+          </div>
             </div>
           </div>
         </div>
@@ -384,11 +384,15 @@
         <div class="contact__form">
           <h3>Send me a message</h3>
           <form
-            id="contactForm"
-            action="submit-form.php"
-            method="POST"
-            novalidate
-          >
+          id="contactForm"
+          action="https://formsubmit.co/dharshan080622@gmail.com"
+          method="POST"
+          novalidate
+        >
+          <!-- For FormSubmit To Send Me the gmail/ -->
+        <input type="hidden" name="_subject" value="New message from portfolio!" />
+        <input type="hidden" name="_captcha" value="false" />
+
             <div class="form-group">
               <label for="name">Name</label>
               <input type="text" id="name" name="name" required />
@@ -417,6 +421,8 @@
             </div>
             <button type="submit" class="button">Send Message</button>
           </form>
+          <!-- ✅ Popup Message -->
+          <div id="successPopup" class="popup">Message sent successfully!</div>
         </div>
       </div>
     </div>

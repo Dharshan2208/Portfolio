@@ -38,34 +38,69 @@ document.addEventListener("DOMContentLoaded", function () {
     );
   });
 
-  // Form validation
+  // Form input validation events
   nameInput.addEventListener("input", validateName);
   emailInput.addEventListener("input", validateEmail);
   messageInput.addEventListener("input", validateMessage);
 
-  form.addEventListener("click", function (event) {
-    if (event.target.classList.contains("button")) {
-      event.preventDefault();
+  // Now using formsubmit so not required
+  // form.addEventListener("click", function (event) {
+  //   if (event.target.classList.contains("button")) {
+  //     event.preventDefault();
 
-      const isNameValid = validateName();
-      const isEmailValid = validateEmail();
-      const isMessageValid = validateMessage();
+  //     const isNameValid = validateName();
+  //     const isEmailValid = validateEmail();
+  //     const isMessageValid = validateMessage();
 
-      if (isNameValid && isEmailValid && isMessageValid) {
-        alert("Message sent successfully!");
-        form.reset();
-        clearErrors();
-      }
+  //     if (isNameValid && isEmailValid && isMessageValid) {
+  //       alert("Message sent successfully!");
+  //       form.reset();
+  //       clearErrors();
+  //     }
+  //   }
+  // });
+
+  // Submit with FormSubmit + custom popup
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    const isNameValid = validateName();
+    const isEmailValid = validateEmail();
+    const isMessageValid = validateMessage();
+
+    if (isNameValid && isEmailValid && isMessageValid) {
+      const formData = new FormData(form);
+
+      fetch("https://formsubmit.co/ajax/dharshan080622@gmail.com", {
+        method: "POST",
+        body: formData,
+      })
+        .then((res) => {
+          if (res.ok) {
+            showPopup();
+            form.reset();
+            clearErrors();
+          } else {
+            alert("Failed to send. Please try again later.");
+          }
+        })
+        .catch(() => {
+          alert("Failed to send. Please check your connection.");
+        });
     }
   });
 
-  function clearErrors() {
-    const formGroups = form.querySelectorAll(".form-group");
-    formGroups.forEach((group) => {
-      group.classList.remove("error");
-    });
+  // Success popup
+  function showPopup() {
+    const popup = document.getElementById("successPopup");
+    popup.classList.add("show");
+
+    setTimeout(() => {
+      popup.classList.remove("show");
+    }, 3000);
   }
 
+  // Validation + error highlighting
   function validateName() {
     const nameValue = nameInput.value.trim();
     const formGroup = nameInput.parentElement;
@@ -107,5 +142,12 @@ document.addEventListener("DOMContentLoaded", function () {
       formGroup.classList.remove("error");
       return true;
     }
+  }
+
+  function clearErrors() {
+    const formGroups = form.querySelectorAll(".form-group");
+    formGroups.forEach((group) => {
+      group.classList.remove("error");
+    });
   }
 });

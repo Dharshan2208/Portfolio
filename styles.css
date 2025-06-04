@@ -924,6 +924,24 @@ section {
     color: var(--primary-hover);
 }
 
+.popup {
+    position: fixed;
+    top: 30px;
+    right: 30px;
+    background-color: #28a745;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    font-weight: bold;
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.popup.show {
+    opacity: 1; }
+
 /* Footer */
 .footer {
     text-align: center;
