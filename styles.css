@@ -262,8 +262,8 @@ section {
 
 }
 
-.profile-content p{
-    font-size: 1.1rem ;
+.profile-content p {
+    font-size: 1.1rem;
 }
 
 /* Gradient text effect */
@@ -295,7 +295,7 @@ section {
 .profile-image {
     position: relative;
     width: 450px;
-    height: 400px;
+    height: 450px;
     overflow: hidden;
     border-radius: 10px;
     transition: var(--transition);
@@ -314,6 +314,7 @@ section {
     background: rgba(0, 0, 0, 0.9);
     border: 2px solid var(--text-secondary);
     box-shadow: 0 0 20px var(--text-tertiary);
+    color: var(--text-main);
     padding: 1rem;
     width: 100%;
     height: 100%;
@@ -321,13 +322,6 @@ section {
     white-space: pre-line;
     line-height: 1.4;
     border-radius: 10px;
-
-    /* Gradient Text */
-    background-image: linear-gradient(to right, #7d7d7d, #c0c0c0, #ffffff);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-fill-color: transparent;
 }
 
 .line {
