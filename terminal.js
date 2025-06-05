@@ -22,8 +22,7 @@ drwxr-xr-x  3 root     root     4096 Jun  1 09:15 ..
 drwxr-xr-x  2 dharshan dharshan 4096 Jun  5 12:30 projects
 -rw-r--r--  1 dharshan dharshan 4096 Jun  4 16:22 resume.pdf
 drwxr-xr-x  2 dharshan dharshan 4096 Jun  5 09:18 skills`,
-  "cat contact.txt": `📧 Email: hdharshan2208@gmail.com
-🔗 LinkedIn: linkedin.com/in/dharshan-h-734033334/
+  "cat contact.txt": `🔗 LinkedIn: linkedin.com/in/dharshan-h-734033334/
 💻 GitHub: github.com/Dharshan2208
 📱 Always open to collaborations!`,
   "cat dreams.txt": `🚀 Building innovative web applications
@@ -75,17 +74,14 @@ Languages:  JavaScript, Python, Java, C
 Other:      AI Integration, RESTful APIs, Responsive Design`,
   projects: `Featured Projects:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-🎯 ExamGenius (2025)
-   AI-powered exam preparation platform
-   Tech: TypeScript, Python, FastAPI, AI Integration
+🎯 ExamGenius
+   AI-powered exam preparation platform.
 
-🎬 FlixTogether (2025)
-   Group movie recommendation system
-   Tech: React, Appwrite, TMDb API, AI Integration
+🎬 FlixTogether
+   Group movie recommendation system.
 
-🤖 Symbol Classifier (2024)
-   ML-based hand-drawn symbol recognition
-   Tech: Python, TensorFlow, NumPy
+🤖 Symbol Classifier
+   ML-based hand-drawn symbol recognition.
 
 Type 'cd projects' to explore more!`,
 };
