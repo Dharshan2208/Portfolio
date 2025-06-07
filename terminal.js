@@ -188,11 +188,29 @@ Type 'help' for available commands or 'about' to know more about me!
   const { prompt, input, cursor } = createPrompt();
   terminal.appendChild(prompt);
 
-  // Handle keyboard input
+  // Handle keyboard input - FIXED VERSION
   document.addEventListener("keydown", (e) => {
-    if (!terminal.contains(e.target) && e.key !== "Tab") {
-      // Focus terminal for any key press
-      e.preventDefault();
+    // Only handle terminal input if:
+    // 1. The click/focus is within the terminal area, OR
+    // 2. No form inputs are currently focused
+    const activeElement = document.activeElement;
+    const isFormInput =
+      activeElement &&
+      (activeElement.tagName === "INPUT" ||
+        activeElement.tagName === "TEXTAREA" ||
+        activeElement.contentEditable === "true");
+
+    // If a form input is focused, don't interfere with it
+    if (isFormInput) {
+      return;
+    }
+
+    // Only handle terminal commands when terminal is clicked or no input is focused
+    const terminalClicked =
+      terminal.contains(e.target) || e.target === terminal;
+
+    if (!terminalClicked && activeElement && activeElement !== document.body) {
+      return; // Don't interfere with other focused elements
     }
 
     const currentPrompt = terminal.querySelector(".terminal-line:last-child");
@@ -277,6 +295,11 @@ Type 'help' for available commands or 'about' to know more about me!
     }
   });
 
+  // Make terminal clickable to focus
+  terminal.addEventListener("click", () => {
+    terminal.focus();
+  });
+
   // Blinking cursor animation
   setInterval(() => {
     const cursor = terminal.querySelector(".cursor");
@@ -334,6 +357,7 @@ const terminalStyles = `
     line-height: 1.3;
     cursor: text;
     user-select: text;
+    outline: none;
 }
 
 .terminal-box:focus {
