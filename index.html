@@ -21,11 +21,11 @@
   <body>
     <div class="matrix-char"></div>
     <script>
-      const glyphs = 'アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワンヶヲ亜炎空神夢零影忍侍魂';
+      const japanese = 'アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワンヶヲ亜炎空神夢零影忍侍魂';
       document.addEventListener('mousemove', (e) => {
         const char = document.createElement('div');
         char.className = 'matrix-char';
-        char.innerText = glyphs[Math.floor(Math.random() * glyphs.length)];
+        char.innerText = japanese[Math.floor(Math.random() * japanese.length)];;
 
         char.style.left = `${e.clientX}px`;
         char.style.top = `${e.clientY}px`;
