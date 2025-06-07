@@ -31,6 +31,31 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+.matrix-char {
+    position: fixed;
+    color: var(--primary-color);
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+    pointer-events: none;
+    user-select: none;
+    opacity: 0.9;
+    animation: matrix-fall 0.6s linear forwards;
+    z-index: 9999;
+    text-shadow: 0 0 4px var(--primary-color), 0 0 8px var(--primary-color);
+}
+
+@keyframes matrix-fall {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(20px) scale(0.5);
+        opacity: 0;
+    }
+}
+
 header {
     background-color: var(--bg-color);
     position: sticky;
