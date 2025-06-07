@@ -28,7 +28,6 @@ Continuous learning and growth`,
 whoami     - Display current user
 pwd        - Print working directory
 ls         - List directory contents
-ls -la     - List with detailed info
 cat <file> - Display file contents
 cd <dir>   - Change directory
 date       - Show current date/time
