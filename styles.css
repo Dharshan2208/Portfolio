@@ -1027,11 +1027,8 @@ section {
     }
 
     .profile-image {
-        order: -1;
         /* Ensures image comes first */
-        width: 220px;
-        height: 220px;
-        margin-bottom: 1.5rem;
+        display: none;
     }
 
     .profile-content {
