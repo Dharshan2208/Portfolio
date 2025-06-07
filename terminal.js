@@ -166,7 +166,7 @@ function initTerminal() {
   // Add welcome message
   const welcome = document.createElement("div");
   welcome.className = "terminal-output";
-  welcome.innerHTML = `<span style="color: var(--primary-color);">Welcome to Dharshan's Terminal v1.0</span>
+  welcome.innerHTML = `<span style="color: var(--primary-color); font-size:16px">Welcome to Dharshan's Terminal v1.0</span>
 
 Last login: ${new Date().toLocaleString()}
 Type 'help' for available commands or 'about' to know more about me!
