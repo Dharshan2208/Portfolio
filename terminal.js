@@ -11,26 +11,15 @@ const commands = {
   whoami: "dharshan",
   pwd: "/home/dharshan",
   ls: "projects  skills  resume.pdf  contact.txt  dreams.txt",
-  "ls -la": `total 42
-drwxr-xr-x  7 dharshan dharshan 4096 Jun  5 12:34 .
-drwxr-xr-x  3 root     root     4096 Jun  1 09:15 ..
--rw-r--r--  1 dharshan dharshan  220 Jun  1 09:15 .bash_logout
--rw-r--r--  1 dharshan dharshan 3771 Jun  1 09:15 .bashrc
--rw-r--r--  1 dharshan dharshan  807 Jun  1 09:15 .profile
--rw-r--r--  1 dharshan dharshan 1337 Jun  5 10:20 contact.txt
--rw-r--r--  1 dharshan dharshan 2048 Jun  5 11:45 dreams.txt
-drwxr-xr-x  2 dharshan dharshan 4096 Jun  5 12:30 projects
--rw-r--r--  1 dharshan dharshan 4096 Jun  4 16:22 resume.pdf
-drwxr-xr-x  2 dharshan dharshan 4096 Jun  5 09:18 skills`,
   "cat contact.txt": `🔗 LinkedIn: linkedin.com/in/dharshan-h-734033334/
-💻 GitHub: github.com/Dharshan2208
-📱 Always open to collaborations!`,
-  "cat dreams.txt": `🚀 Building innovative web applications
-💡 Contributing to open-source projects
-🎯 Landing an amazing internship
-🌟 Creating tech that makes a difference
-⚡ Participating in more hackathons
-🔥 Continuous learning and growth`,
+GitHub: github.com/Dharshan2208
+Always open to collaborations!`,
+  "cat dreams.txt": ` Building innovative web applications
+Contributing to open-source projects
+Landing an amazing internship
+Creating tech that makes a difference
+Participating in more hackathons
+Continuous learning and growth`,
   "cd projects": "projects",
   "cd ..": "~",
   cd: "~",
@@ -53,11 +42,12 @@ help       - Show this help message`,
   history: () => commandHistory.join("\n"),
   about: `Hi! I'm Dharshan 👋
 
-🎓 B.Tech Computer Science Student at Amrita Vishwa Vidyapeetham
-💻 Full-stack developer specializing in MERN stack
-🚀 Hackathon enthusiast with multiple project wins
-🎯 Passionate about building innovative web applications
-⚡ Always learning and exploring new technologies
+🎓 B.Tech CSE Student at Amrita Vishwa Vidyapeetham
+Full-stack developer
+ML/AI enthusiast
+Hackathon enthusiast with multiple creative projects
+Passionate about building innovative web applications
+Always learning and exploring new technologies
 
 Fun facts:
 🎬 Anime & movie enthusiast
