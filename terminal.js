@@ -14,12 +14,12 @@ const commands = {
   "cat contact.txt": `🔗 LinkedIn: linkedin.com/in/dharshan-h-734033334/
 GitHub: github.com/Dharshan2208
 Always open to collaborations!`,
-  "cat dreams.txt": ` Building innovative web applications
-Contributing to open-source projects
-Landing an amazing internship
-Creating tech that makes a difference
-Participating in more hackathons
-Continuous learning and growth`,
+  "cat dreams.txt": ` • Building innovative web applications
+• Contributing to open-source projects
+• Landing an amazing internship
+• Creating tech that makes a difference
+• Participating in more hackathons
+• Continuous learning and growth`,
   "cd projects": "projects",
   "cd ..": "~",
   cd: "~",
@@ -42,11 +42,11 @@ help       - Show this help message`,
   about: `Hi! I'm Dharshan 👋
 
 🎓 B.Tech CSE Student at Amrita Vishwa Vidyapeetham
-Full-stack developer
-ML/AI enthusiast
-Hackathon enthusiast with multiple creative projects
-Passionate about building innovative web applications
-Always learning and exploring new technologies
+• Full-stack developer
+• ML/AI enthusiast
+• Hackathon participant with multiple creative projects
+• Passionate about building innovative web applications
+• Always learning and exploring new technologies
 
 Fun facts:
 🎬 Anime & movie enthusiast
