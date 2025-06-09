@@ -14,7 +14,7 @@ const commands = {
   "cat contact.txt": `🔗 LinkedIn: linkedin.com/in/dharshan-h-734033334/
 GitHub: github.com/Dharshan2208
 Always open to collaborations!`,
-  "cat dreams.txt": ` • Building innovative web applications
+  "cat dreams.txt": `• Building innovative web applications
 • Contributing to open-source projects
 • Landing an amazing internship
 • Creating tech that makes a difference
