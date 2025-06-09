@@ -506,13 +506,6 @@ section {
     text-align: center;
 }
 
-.skills-section .container {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    align-items: center;
-}
-
 .skills-section h2 {
     font-size: 2.25rem;
     font-weight: 700;
@@ -530,15 +523,6 @@ section {
     height: 3px;
     background-color: var(--primary-color);
     transform: translateX(-50%);
-}
-
-.skills-header p {
-    color: var(--text-secondary);
-    font-size: 1rem;
-    margin-top: 1rem;
-    max-width: 600px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .skills-grid {
