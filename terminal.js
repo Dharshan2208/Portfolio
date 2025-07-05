@@ -45,14 +45,14 @@ help       - Show this help message`,
 • Full-stack developer
 • ML/AI enthusiast
 • Hackathon participant with multiple creative projects
-• Passionate about building innovative web applications
+• Building innovative projects
 • Always learning and exploring new technologies
 
 Fun facts:
 🎬 Anime & movie enthusiast
 ♟️  Chess player (strategic thinking!)
 🏸 Badminton lover
-🎮 Gaming in free time`,
+🎮 Gaming in free time(Subway Surfers & Angry Bird)`,
   skills: `Technical Skills:
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 Frontend:   HTML5, CSS3, JavaScript, React.js, TypeScript
@@ -354,7 +354,7 @@ const terminalStyles = `
 }
 `;
 
-// Inject styles
+// Styles
 const styleSheet = document.createElement("style");
 styleSheet.textContent = terminalStyles;
 document.head.appendChild(styleSheet);
