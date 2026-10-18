@@ -121,7 +121,6 @@
         title: "Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing",
         date: "Oct 2024",
         readTime: "6 min read",
-        topics: ["Architecture", "CSS Grid", "TUI", "Vanilla JS"],
         abstract: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         paragraphs: [
           "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
@@ -138,7 +137,6 @@
         title: "Sed Do Eiusmod Tempor Incididunt Ut Labore",
         date: "Aug 2024",
         readTime: "8 min read",
-        topics: ["CLI", "UX Design", "Developer Tools", "Systems"],
         abstract: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque.",
         paragraphs: [
           "Et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta.",
@@ -155,7 +153,6 @@
         title: "Ut Enim Ad Minim Veniam Quis Nostrud Exercitation",
         date: "May 2024",
         readTime: "10 min read",
-        topics: ["Distributed Systems", "Backend", "Architecture"],
         abstract: "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.",
         paragraphs: [
           "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia consequuntur.",
@@ -172,7 +169,6 @@
         title: "Duis Aute Irure Dolor In Reprehenderit Voluptate",
         date: "Feb 2024",
         readTime: "7 min read",
-        topics: ["Concurrency", "Go", "Rust", "Memory Safety"],
         abstract: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
         paragraphs: [
           "Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.",
@@ -189,7 +185,6 @@
         title: "Excepteur Sint Occaecat Cupidatat Non Proident",
         date: "Nov 2023",
         readTime: "9 min read",
-        topics: ["Distributed Systems", "Consensus", "Storage"],
         abstract: "Nam libero tempore cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod.",
         paragraphs: [
           "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.",
@@ -206,7 +201,6 @@
         title: "Sunt In Culpa Qui Officia Deserunt Mollit",
         date: "Aug 2023",
         readTime: "5 min read",
-        topics: ["Software Design", "Domain Driven Design", "Best Practices"],
         abstract: "Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         paragraphs: [
           "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
@@ -296,7 +290,6 @@
         el.dataset.index = index;
         el.innerHTML = `
           <div class="item-main">
-            <span class="text-blue item-icon">›</span>
             <span>${item.title}</span>
           </div>
           <div class="item-meta">${item.date}</div>
@@ -540,12 +533,7 @@
           Duration: <span class="text-yellow">${item.readTime}</span>
         </div>
 
-        <div class="meta-badges-row">
-          ${item.topics.map(t => `<span class="tech-badge text-cyan">${t}</span>`).join('')}
-        </div>
-
         <div class="quote-panel" style="margin-top: 0.5rem; background: rgba(88, 166, 255, 0.04);">
-          <div class="quote-glyph text-yellow">&#9998;</div>
           <div class="quote-body">
             <p class="quote-text" style="font-style: normal; color: var(--clr-text-primary);">${item.abstract}</p>
           </div>
@@ -569,7 +557,6 @@
 
         <!-- Bordered Information Note Panel -->
         <div class="quote-panel" style="margin-top: 1.5rem;">
-          <div class="quote-glyph">&#9834;</div>
           <div class="quote-body">
             <p class="quote-text">Technical essay record &bull; Thoughts on systems, terminal interfaces, and software architecture.</p>
             <span class="quote-citation">Article Index: ${state.itemIndices[2] + 1} of ${DATA.writings.length}</span>
