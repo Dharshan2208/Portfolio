@@ -24,203 +24,10 @@
       },
     },
 
-    projects: [
-      {
-        name: "Lorem Ipsum Dolor Sit Amet",
-        tagline: "Consectetur adipiscing elit sed do eiusmod tempor",
-        year: "2024",
-        technologies: ["lorem", "ipsum", "dolor", "sit"],
-        githubUrl: "https://github.com/Dharshan2208",
-        demoUrl: "https://github.com/Dharshan2208",
-        description:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
-        features: [
-          "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-          "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
-        ],
-      },
-      {
-        name: "Lorem Ipsum Dolor Sit Amet Consectetur",
-        tagline: "Adipiscing elit sed do eiusmod tempor incididunt",
-        year: "2024",
-        technologies: ["amet", "consectetur", "adipiscing", "elit"],
-        githubUrl: "https://github.com/Dharshan2208",
-        demoUrl: "https://github.com/Dharshan2208",
-        description:
-          "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate.",
-        features: [
-          "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus.",
-          "Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet.",
-          "Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores.",
-        ],
-      },
-      {
-        name: "Lorem Ipsum Dolor Sit Amet Elit",
-        tagline: "Tempor incididunt ut labore et dolore magna aliqua",
-        year: "2023",
-        technologies: ["sed", "eiusmod", "tempor", "incididunt"],
-        githubUrl: "https://github.com/Dharshan2208",
-        demoUrl: "https://github.com/Dharshan2208",
-        description:
-          "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.",
-        features: [
-          "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.",
-          "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur.",
-          "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.",
-        ],
-      },
-      {
-        name: "Lorem Ipsum Dolor Sit Amet Tempor",
-        tagline: "Labore et dolore magna aliqua ut enim ad minim",
-        year: "2023",
-        technologies: ["ut", "labore", "dolore", "magna"],
-        githubUrl: "https://github.com/Dharshan2208",
-        demoUrl: "https://github.com/Dharshan2208",
-        description:
-          "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-        features: [
-          "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam.",
-          "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.",
-          "Et harum quidem rerum facilis est et expedita distinctio nam libero tempore.",
-        ],
-      },
-      {
-        name: "Lorem Ipsum Dolor Sit Amet Veniam",
-        tagline: "Quis nostrud exercitation ullamco laboris nisi ut",
-        year: "2022",
-        technologies: ["aliqua", "enim", "minim", "veniam"],
-        githubUrl: "https://github.com/Dharshan2208",
-        demoUrl: "https://github.com/Dharshan2208",
-        description:
-          "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.",
-        features: [
-          "Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus.",
-          "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit.",
-          "Omnis voluptas assumenda est, omnis dolor repellendus temporibus autem quibusdam.",
-        ],
-      },
-      {
-        name: "Lorem Ipsum Dolor Sit Amet Aliquip",
-        tagline: "Ex ea commodo consequat duis aute irure dolor",
-        year: "2022",
-        technologies: ["quis", "nostrud", "exercitation", "ullamco"],
-        githubUrl: "https://github.com/Dharshan2208",
-        demoUrl: "https://github.com/Dharshan2208",
-        description:
-          "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
-        features: [
-          "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis.",
-          "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse.",
-          "Atque corrupti quos dolores et quas molestias excepturi sint occaecati.",
-        ],
-      },
-    ],
-
-    writings: [
-      {
-        title: "Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing",
-        date: "Oct 2024",
-        readTime: "6 min read",
-        abstract:
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        paragraphs: [
-          "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-          "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-        ],
-        takeaways: [
-          "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.",
-          "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.",
-          "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur.",
-        ],
-      },
-      {
-        title: "Sed Do Eiusmod Tempor Incididunt Ut Labore",
-        date: "Aug 2024",
-        readTime: "8 min read",
-        abstract:
-          "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque.",
-        paragraphs: [
-          "Et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta.",
-          "Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet.",
-          "Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus.",
-        ],
-        takeaways: [
-          "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam.",
-          "Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit.",
-          "Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia.",
-        ],
-      },
-      {
-        title: "Ut Enim Ad Minim Veniam Quis Nostrud Exercitation",
-        date: "May 2024",
-        readTime: "10 min read",
-        abstract:
-          "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.",
-        paragraphs: [
-          "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia consequuntur.",
-          "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipiscing elit.",
-          "Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam.",
-        ],
-        takeaways: [
-          "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.",
-          "Nam libero tempore cum soluta nobis est eligendi optio cumque nihil impedit.",
-          "Et harum quidem rerum facilis est et expedita distinctio nam libero tempore.",
-        ],
-      },
-      {
-        title: "Duis Aute Irure Dolor In Reprehenderit Voluptate",
-        date: "Feb 2024",
-        readTime: "7 min read",
-        abstract:
-          "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
-        paragraphs: [
-          "Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.",
-          "Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus maiores alias.",
-          "Omnis voluptas assumenda est omnis dolor repellendus temporibus autem quibusdam et aut officiis.",
-        ],
-        takeaways: [
-          "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil.",
-          "Atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate.",
-          "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed.",
-        ],
-      },
-      {
-        title: "Excepteur Sint Occaecat Cupidatat Non Proident",
-        date: "Nov 2023",
-        readTime: "9 min read",
-        abstract:
-          "Nam libero tempore cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod.",
-        paragraphs: [
-          "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.",
-          "Et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta nobis.",
-          "Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet.",
-        ],
-        takeaways: [
-          "Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam.",
-          "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur.",
-          "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.",
-        ],
-      },
-      {
-        title: "Sunt In Culpa Qui Officia Deserunt Mollit",
-        date: "Aug 2023",
-        readTime: "5 min read",
-        abstract:
-          "Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-        paragraphs: [
-          "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-          "Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim.",
-          "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.",
-        ],
-        takeaways: [
-          "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam.",
-          "Nam libero tempore cum soluta nobis est eligendi optio cumque nihil impedit.",
-          "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.",
-        ],
-      },
-    ],
+    //   script/projects.js -> window.PROJECTS
+    //   script/writings.js -> window.WRITINGS
+    projects: window.PROJECTS || [],
+    writings: window.WRITINGS || [],
   };
 
   // UI Navigation State
@@ -514,13 +321,13 @@
       <!-- Stylized DHARSHAN Wordmark Placeholder Box -->
       <div class="wordmark-container">
         <pre class="wordmark-text">
-=====================================================================
-  ____  _   _    _    ____  ____  _   _    _    _   _ 
- |  _ \\| | | |  / \\  |  _ \\/ ___|| | | |  / \\  | \\ | |
- | | | | |_| | / _ \\ | |_) \\___ \\| |_| | / _ \\ |  \\| |
- | |_| |  _  |/ ___ \\|  _ < ___) |  _  |/ ___ \\| |\\  |
- |____/|_| |_/_/   \\_\\_| \\_\\____/|_| |_/_/   \\_\\_| \\_|
-=====================================================================
+            ================================================================
+            ____  _   _    _    ____  ____  _   _    _    _   _ 
+            |  _ \\| | | |  / \\  |  _ \\/ ___|| | | |  / \\  | \\ | |
+            | | | | |_| | / _ \\ | |_) \\___ \\| |_| | / _ \\ |  \\| |
+            | |_| |  _  |/ ___ \\|  _ < ___) |  _  |/ ___ \\| |\\  |
+            |____/|_| |_/_/   \\_\\_| \\_\\____/|_| |_/_/   \\_\\_| \\_|
+            ================================================================
         </pre>
       </div>
 
