@@ -12,8 +12,8 @@
         `My primary interests lie in <span class="text-pink">backend systems</span>, distributed architectures, and building reliable, scalable systems.`,
         `I enjoy working with <span class="text-orange">Go</span>, exploring system design, developer tooling, and agentic AI applications.`,
         `From building backend services to experimenting with AI powered tools, I like turning ideas into practical, working software or maybe some experimentational projects.`,
-        `I also practice competitive programming on <a href="https://codeforces.com/profile/chifuyu22" target="_blank" rel="noopener noreferrer" class="text-cyan">Codeforces</a>.`,
-        `Feel free to connect with me on <a href="https://www.linkedin.com/in/Dharshan2208/" target="_blank" class="text-blue">LinkedIn</a> or explore my projects on <a href="https://github.com/Dharshan2208" target="_blank" class="text-pink">GitHub</a>.`,
+        `I also practice competitive programming on <a href="https://codeforces.com/profile/chifuyu22" target="_blank" rel="noopener noreferrer" class="text-blue">Codeforces</a>.`,
+        `Feel free to connect with me on <a href="https://www.linkedin.com/in/Dharshan2208/" target="_blank" class="text-pink">LinkedIn</a> or explore my projects on <a href="https://github.com/Dharshan2208" target="_blank" class="text-blue">GitHub</a>.`,
         `Grab a copy of my <a href="Dharshan_CV.pdf" target="_blank" rel="noopener noreferrer" class="text-green">Resume</a>.`,
       ],
       instructions: [
