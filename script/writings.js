@@ -1,7 +1,7 @@
 window.WRITINGS = [
   {
     title: "Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing",
-    date: "Oct 2024",
+    date: "Oct 2025",
     readTime: "6 min read",
     abstract:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
@@ -18,7 +18,7 @@ window.WRITINGS = [
   },
   {
     title: "Sed Do Eiusmod Tempor Incididunt Ut Labore",
-    date: "Aug 2024",
+    date: "Aug 2025",
     readTime: "8 min read",
     abstract:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque.",
@@ -35,7 +35,7 @@ window.WRITINGS = [
   },
   {
     title: "Ut Enim Ad Minim Veniam Quis Nostrud Exercitation",
-    date: "May 2024",
+    date: "May 2025",
     readTime: "10 min read",
     abstract:
       "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.",
@@ -52,7 +52,7 @@ window.WRITINGS = [
   },
   {
     title: "Duis Aute Irure Dolor In Reprehenderit Voluptate",
-    date: "Feb 2024",
+    date: "Feb 2025",
     readTime: "7 min read",
     abstract:
       "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
@@ -69,7 +69,7 @@ window.WRITINGS = [
   },
   {
     title: "Excepteur Sint Occaecat Cupidatat Non Proident",
-    date: "Nov 2023",
+    date: "Nov 2025",
     readTime: "9 min read",
     abstract:
       "Nam libero tempore cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod.",
@@ -86,7 +86,7 @@ window.WRITINGS = [
   },
   {
     title: "Sunt In Culpa Qui Officia Deserunt Mollit",
-    date: "Aug 2023",
+    date: "Aug 2025",
     readTime: "5 min read",
     abstract:
       "Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",

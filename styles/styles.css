@@ -1,3 +1,44 @@
+/* Ioskeley Mono (https://github.com/ahatem/IoskeleyMono) */
+@font-face {
+  font-family: "Ioskeley Mono";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/IoskeleyMono-Regular.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Ioskeley Mono";
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/IoskeleyMono-Italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Ioskeley Mono";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/IoskeleyMono-SemiBold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Ioskeley Mono";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/IoskeleyMono-Bold.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Ioskeley Mono";
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/IoskeleyMono-BoldItalic.woff2") format("woff2");
+}
+
 :root {
   --clr-bg-primary: #0d1117;
   --clr-bg-surface: #141a24;
@@ -20,8 +61,8 @@
   --clr-green: #7ee787;
 
   --font-mono:
-    "Fira Mono", "JetBrains Mono", SFMono-Regular, Menlo, Monaco, Consolas,
-    "Liberation Mono", "Courier New", monospace;
+    "Ioskeley Mono", SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
   --transition-fast: 0.12s ease;
 }
 
@@ -505,7 +546,9 @@ button {
   -webkit-mask: url("../ninja.svg") no-repeat center / contain;
   mask: url("../ninja.svg") no-repeat center / contain;
   cursor: pointer;
-  transition: background-color var(--transition-fast), transform var(--transition-fast);
+  transition:
+    background-color var(--transition-fast),
+    transform var(--transition-fast);
 }
 
 .quote-refresh:hover {
@@ -596,9 +639,14 @@ button {
   color: var(--clr-green);
 }
 
+.footer-link-cyan {
+  color: var(--clr-cyan);
+}
+
 .footer-link-blue:hover,
 .footer-link-pink:hover,
-.footer-link-green:hover {
+.footer-link-green:hover,
+.footer-link-cyan:hover {
   text-decoration: underline;
 }
 

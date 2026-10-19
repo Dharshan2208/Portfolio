@@ -2,7 +2,7 @@ window.PROJECTS = [
   {
     name: "Lorem Ipsum Dolor Sit Amet",
     tagline: "Consectetur adipiscing elit sed do eiusmod tempor",
-    year: "2024",
+    year: "2025",
     technologies: ["lorem", "ipsum", "dolor", "sit"],
     githubUrl: "https://github.com/Dharshan2208",
     demoUrl: "https://github.com/Dharshan2208",
@@ -17,7 +17,7 @@ window.PROJECTS = [
   {
     name: "Lorem Ipsum Dolor Sit Amet Consectetur",
     tagline: "Adipiscing elit sed do eiusmod tempor incididunt",
-    year: "2024",
+    year: "2025",
     technologies: ["amet", "consectetur", "adipiscing", "elit"],
     githubUrl: "https://github.com/Dharshan2208",
     demoUrl: "https://github.com/Dharshan2208",
@@ -32,7 +32,7 @@ window.PROJECTS = [
   {
     name: "Lorem Ipsum Dolor Sit Amet Elit",
     tagline: "Tempor incididunt ut labore et dolore magna aliqua",
-    year: "2023",
+    year: "2025",
     technologies: ["sed", "eiusmod", "tempor", "incididunt"],
     githubUrl: "https://github.com/Dharshan2208",
     demoUrl: "https://github.com/Dharshan2208",
@@ -47,7 +47,7 @@ window.PROJECTS = [
   {
     name: "Lorem Ipsum Dolor Sit Amet Tempor",
     tagline: "Labore et dolore magna aliqua ut enim ad minim",
-    year: "2023",
+    year: "2025",
     technologies: ["ut", "labore", "dolore", "magna"],
     githubUrl: "https://github.com/Dharshan2208",
     demoUrl: "https://github.com/Dharshan2208",
@@ -62,7 +62,7 @@ window.PROJECTS = [
   {
     name: "Lorem Ipsum Dolor Sit Amet Veniam",
     tagline: "Quis nostrud exercitation ullamco laboris nisi ut",
-    year: "2022",
+    year: "2025",
     technologies: ["aliqua", "enim", "minim", "veniam"],
     githubUrl: "https://github.com/Dharshan2208",
     demoUrl: "https://github.com/Dharshan2208",
@@ -77,7 +77,7 @@ window.PROJECTS = [
   {
     name: "Lorem Ipsum Dolor Sit Amet Aliquip",
     tagline: "Ex ea commodo consequat duis aute irure dolor",
-    year: "2022",
+    year: "2025",
     technologies: ["quis", "nostrud", "exercitation", "ullamco"],
     githubUrl: "https://github.com/Dharshan2208",
     demoUrl: "https://github.com/Dharshan2208",

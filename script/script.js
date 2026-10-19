@@ -12,15 +12,17 @@
         `My primary interests lie in <span class="text-pink">backend systems</span>, distributed architectures, and building reliable, scalable systems.`,
         `I enjoy working with <span class="text-orange">Go</span>, exploring system design, developer tooling, and agentic AI applications.`,
         `From building backend services to experimenting with AI powered tools, I like turning ideas into practical, working software or maybe some experimentational projects.`,
+        `I also practice competitive programming on <a href="https://codeforces.com/profile/chifuyu22" target="_blank" rel="noopener noreferrer" class="text-cyan">Codeforces</a>.`,
         `Feel free to connect with me on <a href="https://www.linkedin.com/in/Dharshan2208/" target="_blank" class="text-blue">LinkedIn</a> or explore my projects on <a href="https://github.com/Dharshan2208" target="_blank" class="text-pink">GitHub</a>.`,
+        `Grab a copy of my <a href="Dharshan_CV.pdf" target="_blank" rel="noopener noreferrer" class="text-green">Resume</a>.`,
       ],
       instructions: [
         `<span class="text-pink">Click</span> on any section in the sidebar to inspect past <span class="text-blue">projects</span> and <span class="text-orange">writings</span>.`,
         `You can also navigate through sections using the <span class="text-blue">arrow keys</span>.`,
       ],
       quote: {
-        text: "The details of technical craft are recorded in the commit log of the repository.",
-        citation: "System Architecture Notes — v1.0",
+        text: "Loading a random anime quote...",
+        citation: "AnimeChan API",
       },
     },
 
@@ -48,10 +50,8 @@
   let paginationElements = [];
   let sidebarEl;
 
-  // Live Quote Data (Philosophers API)
-  const QUOTES_API = "https://philosophersapi.com/api";
-  let quoteList = null;
-  let philosopherNames = {};
+  // Live Quote Data (AnimeChan API)
+  const QUOTES_API = "https://api.animechan.io/v1/quotes/random";
   let quoteLoading = false;
   let currentQuote = {
     text: DATA.home.quote.text,
@@ -253,35 +253,27 @@
     }
   }
 
-  // Live Quotes (Philosophers API)
+  // Live Quotes (AnimeChan API)
   async function ensureQuoteData() {
-    if (quoteList) return quoteList.length > 0;
     try {
-      const [quotesRes, philsRes] = await Promise.all([
-        fetch(QUOTES_API + "/quotes"),
-        fetch(QUOTES_API + "/philosophers"),
-      ]);
-      const quotes = await quotesRes.json();
-      const philosophers = await philsRes.json();
+      const res = await fetch(QUOTES_API, { cache: "no-store" });
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      const payload = await res.json();
+      const data = payload && payload.data;
+      if (!data || !data.content) return null;
 
-      if (Array.isArray(philosophers)) {
-        philosophers.forEach((p) => {
-          philosopherNames[p.id] = p.name || p.wikiTitle || "Unknown";
-        });
-      }
-      quoteList = Array.isArray(quotes) ? quotes : [];
-      return quoteList.length > 0;
+      const character = data.character && data.character.name;
+      const anime = data.anime && (data.anime.name || data.anime.altName);
+      const parts = [character, anime].filter(Boolean);
+
+      return {
+        text: data.content,
+        citation: parts.length ? parts.join(" \u2014 ") : "Anime",
+      };
     } catch (err) {
-      console.warn("[quotes] Unable to load quotes from the API.", err);
-      quoteList = [];
-      return false;
+      console.warn("[quotes] Unable to load quote from the API.", err);
+      return null;
     }
-  }
-
-  function formatQuoteCitation(quote) {
-    const pid = quote.philosopher && quote.philosopher.id;
-    const name = (pid && philosopherNames[pid]) || "Unknown";
-    return quote.work ? name + " \u2014 " + quote.work : name;
   }
 
   function renderQuoteIntoDom() {
@@ -299,13 +291,9 @@
     const btn = document.getElementById("quote-refresh");
     if (btn) btn.classList.add("is-loading");
 
-    const ok = await ensureQuoteData();
-    if (ok) {
-      const pick = quoteList[Math.floor(Math.random() * quoteList.length)];
-      currentQuote = {
-        text: pick.quote,
-        citation: formatQuoteCitation(pick),
-      };
+    const fresh = await ensureQuoteData();
+    if (fresh) {
+      currentQuote = fresh;
     }
     renderQuoteIntoDom();
 
@@ -318,19 +306,6 @@
   function renderHomeView() {
     const home = DATA.home;
     mainPanelContent.innerHTML = `
-      <!-- Stylized DHARSHAN Wordmark Placeholder Box -->
-      <div class="wordmark-container">
-        <pre class="wordmark-text">
-            ================================================================
-            ____  _   _    _    ____  ____  _   _    _    _   _ 
-            |  _ \\| | | |  / \\  |  _ \\/ ___|| | | |  / \\  | \\ | |
-            | | | | |_| | / _ \\ | |_) \\___ \\| |_| | / _ \\ |  \\| |
-            | |_| |  _  |/ ___ \\|  _ < ___) |  _  |/ ___ \\| |\\  |
-            |____/|_| |_/_/   \\_\\_| \\_\\____/|_| |_/_/   \\_\\_| \\_|
-            ================================================================
-        </pre>
-      </div>
-
       <!-- Introduction Section -->
       <div class="content-section">
         <div class="content-paragraphs">
@@ -463,7 +438,7 @@
         <!-- Bordered Information Note Panel -->
         <div class="quote-panel" style="margin-top: 1.5rem;">
           <div class="quote-body">
-            <p class="quote-text">Technical essay record &bull; Thoughts on systems, terminal interfaces, and software architecture.</p>
+            <p class="quote-text">lorem ipsum &bull; lorem ipsum, lorem ipsum, and lorem ipsum.</p>
             <span class="quote-citation">Article Index: ${state.itemIndices[2] + 1} of ${DATA.writings.length}</span>
           </div>
         </div>
