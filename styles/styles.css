@@ -493,6 +493,35 @@ button {
   user-select: none;
 }
 
+.quote-refresh {
+  display: block;
+  width: 2.4rem;
+  height: 2.4rem;
+  flex-shrink: 0;
+  align-self: flex-start;
+  padding: 0;
+  border: none;
+  background-color: var(--clr-blue);
+  -webkit-mask: url("../ninja.svg") no-repeat center / contain;
+  mask: url("../ninja.svg") no-repeat center / contain;
+  cursor: pointer;
+  transition: background-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.quote-refresh:hover {
+  background-color: var(--clr-green);
+  transform: scale(1.08);
+}
+
+.quote-refresh:focus-visible {
+  outline: 1px solid var(--clr-border-active);
+  outline-offset: 2px;
+}
+
+.quote-refresh.is-loading {
+  opacity: 0.5;
+}
+
 .quote-body {
   display: flex;
   flex-direction: column;

@@ -1,32 +1,27 @@
-/**
- * Dharshan - Terminal Portfolio Engine
- * Vanilla JavaScript implementation for TUI navigation, keyboard shortcuts, and view rendering.
- */
-
 (function () {
-  'use strict';
+  "use strict";
 
-  // --- Data Models (Home, Projects, Writings) ---
+  // Data Models (Home, Projects, Writings)
 
   const DATA = {
     home: {
       name: "Dharshan",
       intro: [
-        `Hi, I'm <span class="text-blue">Dharshan</span>`,
-        `A <span class="text-orange">software engineer</span> and <span class="text-orange">developer</span>.`,
-        `Although my focus is on systems and backend architectures, most of my experience encompasses <span class="text-pink">full-stack</span> software development.`,
-        `I enjoy exploring low-level systems, developer tooling, and building clean, efficient user experiences.`,
-        `Another interest of mine is <span class="text-orange">interface ergonomics</span>, designing tools that feel responsive, tactile, and natural to operate.`,
-        `If you'd like to get in touch, feel free to connect via <a href="https://www.linkedin.com/in/dharshan-h-734033334/" target="_blank" class="text-blue">LinkedIn</a> or check out public repositories on <a href="https://github.com/Dharshan2208" target="_blank" class="text-pink">GitHub</a>.`
+        `Hi, I'm <span class="text-blue">Dharshan</span>.`,
+        `A <span class="text-orange">computer science student</span> @ Amrita Vishwa Vidyapeetham`,
+        `My primary interests lie in <span class="text-pink">backend systems</span>, distributed architectures, and building reliable, scalable systems.`,
+        `I enjoy working with <span class="text-orange">Go</span>, exploring system design, developer tooling, and agentic AI applications.`,
+        `From building backend services to experimenting with AI powered tools, I like turning ideas into practical, working software or maybe some experimentational projects.`,
+        `Feel free to connect with me on <a href="https://www.linkedin.com/in/Dharshan2208/" target="_blank" class="text-blue">LinkedIn</a> or explore my projects on <a href="https://github.com/Dharshan2208" target="_blank" class="text-pink">GitHub</a>.`,
       ],
       instructions: [
         `<span class="text-pink">Click</span> on any section in the sidebar to inspect past <span class="text-blue">projects</span> and <span class="text-orange">writings</span>.`,
-        `You can also navigate through sections using the <span class="text-blue">arrow keys</span>.`
+        `You can also navigate through sections using the <span class="text-blue">arrow keys</span>.`,
       ],
       quote: {
         text: "The details of technical craft are recorded in the commit log of the repository.",
-        citation: "System Architecture Notes — v1.0"
-      }
+        citation: "System Architecture Notes — v1.0",
+      },
     },
 
     projects: [
@@ -37,11 +32,12 @@
         technologies: ["lorem", "ipsum", "dolor", "sit"],
         githubUrl: "https://github.com/Dharshan2208",
         demoUrl: "https://github.com/Dharshan2208",
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
+        description:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.",
         features: [
           "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
           "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
-          "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium."
+          "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
         ],
       },
       {
@@ -51,11 +47,12 @@
         technologies: ["amet", "consectetur", "adipiscing", "elit"],
         githubUrl: "https://github.com/Dharshan2208",
         demoUrl: "https://github.com/Dharshan2208",
-        description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate.",
+        description:
+          "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate.",
         features: [
           "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus.",
           "Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet.",
-          "Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores."
+          "Itaque earum rerum hic tenetur a sapiente delectus, ut aut reiciendis voluptatibus maiores.",
         ],
       },
       {
@@ -65,11 +62,12 @@
         technologies: ["sed", "eiusmod", "tempor", "incididunt"],
         githubUrl: "https://github.com/Dharshan2208",
         demoUrl: "https://github.com/Dharshan2208",
-        description: "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.",
+        description:
+          "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur.",
         features: [
           "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.",
           "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet consectetur.",
-          "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam."
+          "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam.",
         ],
       },
       {
@@ -79,11 +77,12 @@
         technologies: ["ut", "labore", "dolore", "magna"],
         githubUrl: "https://github.com/Dharshan2208",
         demoUrl: "https://github.com/Dharshan2208",
-        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+        description:
+          "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
         features: [
           "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam.",
           "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.",
-          "Et harum quidem rerum facilis est et expedita distinctio nam libero tempore."
+          "Et harum quidem rerum facilis est et expedita distinctio nam libero tempore.",
         ],
       },
       {
@@ -93,11 +92,12 @@
         technologies: ["aliqua", "enim", "minim", "veniam"],
         githubUrl: "https://github.com/Dharshan2208",
         demoUrl: "https://github.com/Dharshan2208",
-        description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.",
+        description:
+          "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt.",
         features: [
           "Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus.",
           "Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit.",
-          "Omnis voluptas assumenda est, omnis dolor repellendus temporibus autem quibusdam."
+          "Omnis voluptas assumenda est, omnis dolor repellendus temporibus autem quibusdam.",
         ],
       },
       {
@@ -107,13 +107,14 @@
         technologies: ["quis", "nostrud", "exercitation", "ullamco"],
         githubUrl: "https://github.com/Dharshan2208",
         demoUrl: "https://github.com/Dharshan2208",
-        description: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
+        description:
+          "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.",
         features: [
           "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis.",
           "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse.",
-          "Atque corrupti quos dolores et quas molestias excepturi sint occaecati."
+          "Atque corrupti quos dolores et quas molestias excepturi sint occaecati.",
         ],
-      }
+      },
     ],
 
     writings: [
@@ -121,111 +122,117 @@
         title: "Lorem Ipsum Dolor Sit Amet Consectetur Adipiscing",
         date: "Oct 2024",
         readTime: "6 min read",
-        abstract: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        abstract:
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         paragraphs: [
           "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
           "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
-          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+          "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
         ],
         takeaways: [
           "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.",
           "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.",
-          "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur."
-        ]
+          "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur.",
+        ],
       },
       {
         title: "Sed Do Eiusmod Tempor Incididunt Ut Labore",
         date: "Aug 2024",
         readTime: "8 min read",
-        abstract: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque.",
+        abstract:
+          "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque.",
         paragraphs: [
           "Et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta.",
           "Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet.",
-          "Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus."
+          "Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus.",
         ],
         takeaways: [
           "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam.",
           "Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit.",
-          "Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia."
-        ]
+          "Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia.",
+        ],
       },
       {
         title: "Ut Enim Ad Minim Veniam Quis Nostrud Exercitation",
         date: "May 2024",
         readTime: "10 min read",
-        abstract: "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.",
+        abstract:
+          "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur.",
         paragraphs: [
           "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed quia consequuntur.",
           "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur adipiscing elit.",
-          "Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam."
+          "Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam.",
         ],
         takeaways: [
           "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis.",
           "Nam libero tempore cum soluta nobis est eligendi optio cumque nihil impedit.",
-          "Et harum quidem rerum facilis est et expedita distinctio nam libero tempore."
-        ]
+          "Et harum quidem rerum facilis est et expedita distinctio nam libero tempore.",
+        ],
       },
       {
         title: "Duis Aute Irure Dolor In Reprehenderit Voluptate",
         date: "Feb 2024",
         readTime: "7 min read",
-        abstract: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
+        abstract:
+          "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.",
         paragraphs: [
           "Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet ut et voluptates.",
           "Itaque earum rerum hic tenetur a sapiente delectus ut aut reiciendis voluptatibus maiores alias.",
-          "Omnis voluptas assumenda est omnis dolor repellendus temporibus autem quibusdam et aut officiis."
+          "Omnis voluptas assumenda est omnis dolor repellendus temporibus autem quibusdam et aut officiis.",
         ],
         takeaways: [
           "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil.",
           "Atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate.",
-          "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed."
-        ]
+          "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit sed.",
+        ],
       },
       {
         title: "Excepteur Sint Occaecat Cupidatat Non Proident",
         date: "Nov 2023",
         readTime: "9 min read",
-        abstract: "Nam libero tempore cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod.",
+        abstract:
+          "Nam libero tempore cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod.",
         paragraphs: [
           "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.",
           "Et harum quidem rerum facilis est et expedita distinctio nam libero tempore cum soluta nobis.",
-          "Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet."
+          "Temporibus autem quibusdam et aut officiis debitis aut rerum necessitatibus saepe eveniet.",
         ],
         takeaways: [
           "Ut enim ad minima veniam quis nostrum exercitationem ullam corporis suscipit laboriosam.",
           "Neque porro quisquam est qui dolorem ipsum quia dolor sit amet consectetur.",
-          "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium."
-        ]
+          "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium.",
+        ],
       },
       {
         title: "Sunt In Culpa Qui Officia Deserunt Mollit",
         date: "Aug 2023",
         readTime: "5 min read",
-        abstract: "Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        abstract:
+          "Ut enim ad minim veniam quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         paragraphs: [
           "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
           "Excepteur sint occaecat cupidatat non proident sunt in culpa qui officia deserunt mollit anim.",
-          "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum."
+          "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum.",
         ],
         takeaways: [
           "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam.",
           "Nam libero tempore cum soluta nobis est eligendi optio cumque nihil impedit.",
-          "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit."
-        ]
-      }
-    ]
+          "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.",
+        ],
+      },
+    ],
   };
 
-  // --- UI Navigation State ---
+  // UI Navigation State
   const state = {
     sectionIndex: 0, // 0: Home, 1: Projects, 2: Writings
     itemIndices: [0, 0, 0], // Selected item index for [Home, Projects, Writings]
   };
 
   const SECTIONS = [
-    { id: 'panel-home', key: 'home', count: 0 },
-    { id: 'panel-projects', key: 'projects', count: DATA.projects.length },
-    { id: 'panel-writings', key: 'writings', count: DATA.writings.length }
+    { id: "panel-home", key: "home", count: 0 },
+    { id: "panel-projects", key: "projects", count: DATA.projects.length },
+    { id: "panel-writings", key: "writings", count: DATA.writings.length },
   ];
 
   // DOM Elements
@@ -234,16 +241,26 @@
   let paginationElements = [];
   let sidebarEl;
 
+  // Live Quote Data (Philosophers API)
+  const QUOTES_API = "https://philosophersapi.com/api";
+  let quoteList = null;
+  let philosopherNames = {};
+  let quoteLoading = false;
+  let currentQuote = {
+    text: DATA.home.quote.text,
+    citation: DATA.home.quote.citation,
+  };
+
   // Initialize
   function init() {
-    sidebarEl = document.getElementById('sidebar');
-    mainPanelContent = document.getElementById('main-panel-content');
+    sidebarEl = document.getElementById("sidebar");
+    mainPanelContent = document.getElementById("main-panel-content");
 
-    panelElements = SECTIONS.map(s => document.getElementById(s.id));
+    panelElements = SECTIONS.map((s) => document.getElementById(s.id));
     paginationElements = [
       null, // Home has no list pagination
-      document.getElementById('projects-pagination'),
-      document.getElementById('writings-pagination')
+      document.getElementById("projects-pagination"),
+      document.getElementById("writings-pagination"),
     ];
 
     populateSidebarLists();
@@ -254,25 +271,28 @@
     } else {
       updateUI(false);
     }
+
+    // Load a live quote on startup
+    showRandomQuote();
   }
 
   // Populate the Sidebar List Items
   function populateSidebarLists() {
     // 1. Projects List
-    const projList = document.getElementById('projects-list');
+    const projList = document.getElementById("projects-list");
     if (projList) {
-      projList.innerHTML = '';
+      projList.innerHTML = "";
       DATA.projects.forEach((item, index) => {
-        const el = document.createElement('div');
-        el.className = 'ui-list-item' + (index === 0 ? ' selected-item' : '');
+        const el = document.createElement("div");
+        el.className = "ui-list-item" + (index === 0 ? " selected-item" : "");
         el.dataset.index = index;
         el.innerHTML = `
           <div class="item-main">
-            <span>${item.name.split(':')[0]}</span>
+            <span>${item.name.split(":")[0]}</span>
           </div>
           <div class="item-meta text-yellow">${item.year}</div>
         `;
-        el.addEventListener('click', (e) => {
+        el.addEventListener("click", (e) => {
           e.stopPropagation();
           selectSection(1, index);
         });
@@ -281,12 +301,12 @@
     }
 
     // 2. Writings List
-    const writingsList = document.getElementById('writings-list');
+    const writingsList = document.getElementById("writings-list");
     if (writingsList) {
-      writingsList.innerHTML = '';
+      writingsList.innerHTML = "";
       DATA.writings.forEach((item, index) => {
-        const el = document.createElement('div');
-        el.className = 'ui-list-item' + (index === 0 ? ' selected-item' : '');
+        const el = document.createElement("div");
+        el.className = "ui-list-item" + (index === 0 ? " selected-item" : "");
         el.dataset.index = index;
         el.innerHTML = `
           <div class="item-main">
@@ -294,7 +314,7 @@
           </div>
           <div class="item-meta">${item.date}</div>
         `;
-        el.addEventListener('click', (e) => {
+        el.addEventListener("click", (e) => {
           e.stopPropagation();
           selectSection(2, index);
         });
@@ -310,13 +330,16 @@
     state.sectionIndex = sectionIndex;
     if (itemIndex !== null && sectionIndex > 0) {
       const maxCount = SECTIONS[sectionIndex].count;
-      state.itemIndices[sectionIndex] = Math.max(0, Math.min(itemIndex, maxCount - 1));
+      state.itemIndices[sectionIndex] = Math.max(
+        0,
+        Math.min(itemIndex, maxCount - 1),
+      );
     }
 
     updateUI(true);
 
-    if (sidebarEl && sidebarEl.classList.contains('mobile-open')) {
-      sidebarEl.classList.remove('mobile-open');
+    if (sidebarEl && sidebarEl.classList.contains("mobile-open")) {
+      sidebarEl.classList.remove("mobile-open");
     }
   }
 
@@ -346,7 +369,7 @@
     if (!mainPanelContent) return;
     mainPanelContent.scrollBy({
       top: amount,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
   }
 
@@ -356,9 +379,9 @@
     panelElements.forEach((panel, idx) => {
       if (!panel) return;
       if (idx === state.sectionIndex) {
-        panel.classList.add('selected-frame');
+        panel.classList.add("selected-frame");
       } else {
-        panel.classList.remove('selected-frame');
+        panel.classList.remove("selected-frame");
       }
     });
 
@@ -366,17 +389,17 @@
     [1, 2].forEach((sIdx) => {
       const panel = panelElements[sIdx];
       if (!panel) return;
-      const listItems = panel.querySelectorAll('.ui-list-item');
+      const listItems = panel.querySelectorAll(".ui-list-item");
       const activeItemIndex = state.itemIndices[sIdx];
 
       listItems.forEach((item, idx) => {
         if (idx === activeItemIndex) {
-          item.classList.add('selected-item');
+          item.classList.add("selected-item");
           if (sIdx === state.sectionIndex) {
-            scrollItemIntoView(item, panel.querySelector('.ui-list'));
+            scrollItemIntoView(item, panel.querySelector(".ui-list"));
           }
         } else {
-          item.classList.remove('selected-item');
+          item.classList.remove("selected-item");
         }
       });
 
@@ -423,6 +446,67 @@
     }
   }
 
+  // Live Quotes (Philosophers API)
+  async function ensureQuoteData() {
+    if (quoteList) return quoteList.length > 0;
+    try {
+      const [quotesRes, philsRes] = await Promise.all([
+        fetch(QUOTES_API + "/quotes"),
+        fetch(QUOTES_API + "/philosophers"),
+      ]);
+      const quotes = await quotesRes.json();
+      const philosophers = await philsRes.json();
+
+      if (Array.isArray(philosophers)) {
+        philosophers.forEach((p) => {
+          philosopherNames[p.id] = p.name || p.wikiTitle || "Unknown";
+        });
+      }
+      quoteList = Array.isArray(quotes) ? quotes : [];
+      return quoteList.length > 0;
+    } catch (err) {
+      console.warn("[quotes] Unable to load quotes from the API.", err);
+      quoteList = [];
+      return false;
+    }
+  }
+
+  function formatQuoteCitation(quote) {
+    const pid = quote.philosopher && quote.philosopher.id;
+    const name = (pid && philosopherNames[pid]) || "Unknown";
+    return quote.work ? name + " \u2014 " + quote.work : name;
+  }
+
+  function renderQuoteIntoDom() {
+    const textEl = document.getElementById("quote-text");
+    const citeEl = document.getElementById("quote-citation");
+    if (!textEl || !citeEl) return;
+    textEl.textContent = "\u201C" + currentQuote.text + "\u201D";
+    citeEl.textContent = currentQuote.citation;
+  }
+
+  async function showRandomQuote() {
+    if (quoteLoading) return;
+    quoteLoading = true;
+
+    const btn = document.getElementById("quote-refresh");
+    if (btn) btn.classList.add("is-loading");
+
+    const ok = await ensureQuoteData();
+    if (ok) {
+      const pick = quoteList[Math.floor(Math.random() * quoteList.length)];
+      currentQuote = {
+        text: pick.quote,
+        citation: formatQuoteCitation(pick),
+      };
+    }
+    renderQuoteIntoDom();
+
+    quoteLoading = false;
+    const activeBtn = document.getElementById("quote-refresh");
+    if (activeBtn) activeBtn.classList.remove("is-loading");
+  }
+
   // View: Home
   function renderHomeView() {
     const home = DATA.home;
@@ -443,23 +527,29 @@
       <!-- Introduction Section -->
       <div class="content-section">
         <div class="content-paragraphs">
-          ${home.intro.map(p => `<p>${p}</p>`).join('')}
+          ${home.intro.map((p) => `<p>${p}</p>`).join("")}
         </div>
 
         <div class="content-paragraphs" style="margin-top: 0.5rem;">
-          ${home.instructions.map(p => `<p>${p}</p>`).join('')}
+          ${home.instructions.map((p) => `<p>${p}</p>`).join("")}
         </div>
       </div>
 
-      <!-- Bordered Placeholder Quote / Information Panel -->
+      <!-- Live Quote Panel (Philosophers API) -->
       <div class="quote-panel">
-        <div class="quote-glyph">&#9835;</div>
+        <button id="quote-refresh" class="quote-refresh" type="button" aria-label="Load another quote" title="Load another quote"></button>
         <div class="quote-body">
-          <p class="quote-text">&ldquo;${home.quote.text}&rdquo;</p>
-          <span class="quote-citation">${home.quote.citation}</span>
+          <p class="quote-text" id="quote-text"></p>
+          <span class="quote-citation" id="quote-citation"></span>
         </div>
       </div>
     `;
+
+    renderQuoteIntoDom();
+    const refreshBtn = mainPanelContent.querySelector("#quote-refresh");
+    if (refreshBtn) {
+      refreshBtn.addEventListener("click", showRandomQuote);
+    }
   }
 
   // View: Projects
@@ -478,7 +568,7 @@
         </div>
 
         <div class="meta-badges-row">
-          ${item.technologies.map(t => `<span class="tech-badge">${t}</span>`).join('')}
+          ${item.technologies.map((t) => `<span class="tech-badge">${t}</span>`).join("")}
         </div>
 
         <div class="buttons-row">
@@ -497,12 +587,16 @@
         <div style="margin-top: 0.5rem;">
           <h2 class="content-subtitle text-cyan" style="margin-bottom: 0.5rem;">Architecture Highlights:</h2>
           <div class="bullet-list">
-            ${item.features.map(f => `
+            ${item.features
+              .map(
+                (f) => `
               <div class="bullet-item">
                 <span class="bullet-bullet">&#10095;</span>
                 <span>${f}</span>
               </div>
-            `).join('')}
+            `,
+              )
+              .join("")}
           </div>
         </div>
 
@@ -540,18 +634,22 @@
         </div>
 
         <div class="content-paragraphs" style="margin-top: 0.8rem;">
-          ${item.paragraphs.map(p => `<p>${p}</p>`).join('')}
+          ${item.paragraphs.map((p) => `<p>${p}</p>`).join("")}
         </div>
 
         <div style="margin-top: 0.8rem;">
           <h2 class="content-subtitle text-cyan" style="margin-bottom: 0.6rem;">Key Takeaways:</h2>
           <div class="bullet-list">
-            ${item.takeaways.map(t => `
+            ${item.takeaways
+              .map(
+                (t) => `
               <div class="bullet-item">
                 <span class="bullet-bullet">&#10095;</span>
                 <span>${t}</span>
               </div>
-            `).join('')}
+            `,
+              )
+              .join("")}
           </div>
         </div>
 
@@ -571,68 +669,68 @@
     // 1. Sidebar Panel Click Listeners
     panelElements.forEach((panel, idx) => {
       if (!panel) return;
-      panel.addEventListener('click', () => {
+      panel.addEventListener("click", () => {
         selectSection(idx);
       });
     });
 
     // 2. Keyboard Navigation
-    window.addEventListener('keydown', (e) => {
-      if (['INPUT', 'TEXTAREA'].includes(document.activeElement.tagName)) return;
+    window.addEventListener("keydown", (e) => {
+      if (["INPUT", "TEXTAREA"].includes(document.activeElement.tagName))
+        return;
 
       const key = e.key;
 
-      if (key === 'ArrowUp') {
+      if (key === "ArrowUp") {
         e.preventDefault();
         changeItem(-1);
-      } else if (key === 'ArrowDown') {
+      } else if (key === "ArrowDown") {
         e.preventDefault();
         changeItem(1);
-      } else if (key === 'ArrowLeft') {
+      } else if (key === "ArrowLeft") {
         e.preventDefault();
         prevSection();
-      } else if (key === 'ArrowRight') {
+      } else if (key === "ArrowRight") {
         e.preventDefault();
         nextSection();
-      } else if (key === 'PageDown') {
+      } else if (key === "PageDown") {
         e.preventDefault();
         scrollMain(window.innerHeight * 0.45);
-      } else if (key === 'PageUp') {
+      } else if (key === "PageUp") {
         e.preventDefault();
         scrollMain(-window.innerHeight * 0.45);
       }
     });
 
     // 3. Mobile Toggle
-    const mobileToggle = document.getElementById('mobile-toggle');
+    const mobileToggle = document.getElementById("mobile-toggle");
     if (mobileToggle) {
-      mobileToggle.addEventListener('click', () => {
+      mobileToggle.addEventListener("click", () => {
         if (sidebarEl) {
-          sidebarEl.classList.toggle('mobile-open');
+          sidebarEl.classList.toggle("mobile-open");
         }
       });
     }
 
     // 4. Hash Routing Listener
-    window.addEventListener('hashchange', handleHashChange);
+    window.addEventListener("hashchange", handleHashChange);
   }
 
   function handleHashChange() {
-    const hash = window.location.hash.toLowerCase().replace('#', '');
-    if (hash === 'home') {
+    const hash = window.location.hash.toLowerCase().replace("#", "");
+    if (hash === "home") {
       selectSection(0);
-    } else if (hash === 'projects') {
+    } else if (hash === "projects") {
       selectSection(1, state.itemIndices[1]);
-    } else if (hash === 'writings') {
+    } else if (hash === "writings") {
       selectSection(2, state.itemIndices[2]);
     }
   }
 
   // Auto initialize on DOM ready
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init);
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", init);
   } else {
     init();
   }
-
 })();
