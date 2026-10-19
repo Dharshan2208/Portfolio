@@ -184,6 +184,7 @@ button {
 
 /* Left Sidebar (~27% viewport width) */
 #sidebar {
+  position: relative;
   display: flex;
   flex-direction: column;
   width: 27%;
@@ -192,6 +193,76 @@ button {
   height: 100%;
   gap: 0.65rem;
   flex-shrink: 0;
+  transition:
+    width 0.2s ease,
+    min-width 0.2s ease,
+    max-width 0.2s ease;
+}
+
+/* Sidebar Collapse Toggle */
+.sidebar-toggle {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.4rem;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.4rem;
+  height: 1.4rem;
+  padding: 0;
+  background: var(--clr-bg-surface);
+  border: 1px solid var(--clr-border);
+  color: var(--clr-blue);
+  font-size: 0.62rem;
+  line-height: 1;
+  cursor: pointer;
+  transition:
+    color var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.sidebar-toggle:hover {
+  color: var(--clr-green);
+  border-color: var(--clr-border-active);
+}
+
+.sidebar-toggle:focus-visible {
+  outline: 1px solid var(--clr-border-active);
+  outline-offset: 2px;
+}
+
+/* Collapsed Rail Mode */
+#sidebar.collapsed {
+  width: 3.2rem;
+  min-width: 3.2rem;
+  max-width: 3.2rem;
+}
+
+#sidebar.collapsed .panel-content,
+#sidebar.collapsed .home-summary-text,
+#sidebar.collapsed .panel-pagination {
+  display: none;
+}
+
+#sidebar.collapsed .tui-panel {
+  padding: 0.9rem 0.15rem 0.3rem;
+  align-items: center;
+}
+
+#sidebar.collapsed .panel-title {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  text-align: center;
+  margin: 0 auto;
+  white-space: nowrap;
+}
+
+#sidebar.collapsed .sidebar-toggle {
+  top: auto;
+  bottom: 0.4rem;
+  right: 50%;
+  transform: translateX(50%);
 }
 
 /* Bordered Panel Box */
@@ -659,6 +730,11 @@ button {
 
   .mobile-toggle-btn {
     display: inline-block;
+  }
+
+  /* The sidebar is a full overlay on mobile, so rail mode is not used */
+  .sidebar-toggle {
+    display: none;
   }
 
   #workspace {

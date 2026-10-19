@@ -1,83 +1,143 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#0d1117" />
-  <meta name="description" content="Dharshan - Portfolio" />
-  <title>Dharshan - Portfolio</title>
-  <link rel="stylesheet" href="styles/styles.css" />
-</head>
-<body>
-  <div id="app-shell">
-    <button id="mobile-toggle" class="mobile-toggle-btn" aria-label="Toggle Navigation">&#9776; Menu</button>
-    
-    <!-- Main Workspace (Sidebar + Content Panel) -->
-    <main id="workspace">
-      
-      <!-- Left Sidebar (~25% viewport width) -->
-      <aside id="sidebar">
-        
-        <!-- Home Panel -->
-        <section id="panel-home" class="tui-panel selected-frame" tabindex="0">
-          <div class="panel-title decorating-text">Home</div>
-          <div class="home-summary-text">
-            Hello! I'm <span class="text-blue">Dharshan</span>, a computer science student and developer :)
-            <div style="margin-top: 0.35rem; color: var(--clr-text-muted); font-size: 0.85rem;">
-              Press around to <span class="text-orange">explore</span> the website.
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#0d1117" />
+    <meta name="description" content="Dharshan - Portfolio" />
+    <title>Dharshan - Portfolio</title>
+    <link rel="stylesheet" href="styles/styles.css" />
+  </head>
+  <body>
+    <div id="app-shell">
+      <button
+        id="mobile-toggle"
+        class="mobile-toggle-btn"
+        aria-label="Toggle Navigation"
+      >
+        &#9776; Menu
+      </button>
+
+      <!-- Main Workspace (Sidebar + Content Panel) -->
+      <main id="workspace">
+        <!-- Left Sidebar (~25% viewport width) -->
+        <aside id="sidebar">
+          <button
+            id="sidebar-toggle"
+            class="sidebar-toggle"
+            type="button"
+            aria-label="Collapse sidebar"
+            aria-expanded="true"
+            title="Collapse sidebar"
+          >
+            &#9664;
+          </button>
+
+          <!-- Home Panel -->
+          <section
+            id="panel-home"
+            class="tui-panel selected-frame"
+            tabindex="0"
+          >
+            <div class="panel-title decorating-text">Home</div>
+            <div class="home-summary-text">
+              Hello! I'm <span class="text-blue">Dharshan</span>, a computer
+              science student and developer :)
+              <div
+                style="
+                  margin-top: 0.35rem;
+                  color: var(--clr-text-muted);
+                  font-size: 0.85rem;
+                "
+              >
+                Press around to <span class="text-orange">explore</span> the
+                website.
+              </div>
             </div>
+          </section>
+
+          <!-- Projects Panel -->
+          <section id="panel-projects" class="tui-panel" tabindex="0">
+            <div class="panel-title decorating-text">Projects</div>
+            <div
+              id="projects-pagination"
+              class="panel-pagination decorating-text"
+            >
+              1 of 6
+            </div>
+            <div class="panel-content">
+              <div id="projects-list" class="ui-list"></div>
+            </div>
+          </section>
+
+          <!-- Writings Panel -->
+          <section id="panel-writings" class="tui-panel" tabindex="0">
+            <div class="panel-title decorating-text">Writings</div>
+            <div
+              id="writings-pagination"
+              class="panel-pagination decorating-text"
+            >
+              1 of 6
+            </div>
+            <div class="panel-content">
+              <div id="writings-list" class="ui-list"></div>
+            </div>
+          </section>
+        </aside>
+
+        <!-- Right Main Content Panel (~75% viewport width) -->
+        <section id="main-panel" aria-label="Main Content Area">
+          <div id="main-panel-content" class="main-panel-scrollable">
+            <!-- Populated dynamically by script/script.js -->
           </div>
         </section>
+      </main>
 
-        <!-- Projects Panel -->
-        <section id="panel-projects" class="tui-panel" tabindex="0">
-          <div class="panel-title decorating-text">Projects</div>
-          <div id="projects-pagination" class="panel-pagination decorating-text">1 of 6</div>
-          <div class="panel-content">
-            <div id="projects-list" class="ui-list"></div>
-          </div>
-        </section>
-
-        <!-- Writings Panel -->
-        <section id="panel-writings" class="tui-panel" tabindex="0">
-          <div class="panel-title decorating-text">Writings</div>
-          <div id="writings-pagination" class="panel-pagination decorating-text">1 of 6</div>
-          <div class="panel-content">
-            <div id="writings-list" class="ui-list"></div>
-          </div>
-        </section>
-
-      </aside>
-
-      <!-- Right Main Content Panel (~75% viewport width) -->
-      <section id="main-panel" aria-label="Main Content Area">
-        <div id="main-panel-content" class="main-panel-scrollable">
-          <!-- Populated dynamically by script/script.js -->
+      <!-- Bottom Keyboard Shortcut Hint Bar & Links -->
+      <footer id="footer-bar">
+        <div class="shortcut-hints">
+          <span class="text-blue">&lt;pgup&gt;/&lt;pgdown&gt;</span>: Scroll,
+          <span class="text-blue">&lt;left&gt;/&lt;right&gt;</span>: Switch
+          section, <span class="text-blue">&lt;tab&gt;</span>: Toggle
+          sidebar, <span class="text-blue">&lt;up&gt;/&lt;down&gt;</span>:
+          Switch item
+          <span class="text-pink">(or just use the mouse)</span>
         </div>
-      </section>
+        <div class="footer-links">
+          <a
+            href="https://github.com/Dharshan2208"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="footer-link-blue"
+            >GitHub</a
+          >
+          <a
+            href="https://www.linkedin.com/in/Dharshan2208/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="footer-link-pink"
+            >LinkedIn</a
+          >
+          <a
+            href="https://codeforces.com/profile/chifuyu22"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="footer-link-cyan"
+            >Codeforces</a
+          >
+          <a
+            href="Dharshan_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="footer-link-green"
+            >Resume</a
+          >
+        </div>
+      </footer>
+    </div>
 
-    </main>
-
-    <!-- Bottom Keyboard Shortcut Hint Bar & Links -->
-    <footer id="footer-bar">
-      <div class="shortcut-hints">
-        <span class="text-blue">&lt;pgup&gt;/&lt;pgdown&gt;</span>: Scroll, 
-        <span class="text-blue">&lt;left&gt;/&lt;right&gt;</span>: Switch section, 
-        <span class="text-blue">&lt;up&gt;/&lt;down&gt;</span>: Switch item 
-        <span class="text-pink">(or just use the mouse)</span>
-      </div>
-      <div class="footer-links">
-        <a href="https://github.com/Dharshan2208" target="_blank" rel="noopener noreferrer" class="footer-link-blue">GitHub</a>
-        <a href="https://www.linkedin.com/in/Dharshan2208/" target="_blank" rel="noopener noreferrer" class="footer-link-pink">LinkedIn</a>
-        <a href="https://codeforces.com/profile/chifuyu22" target="_blank" rel="noopener noreferrer" class="footer-link-cyan">Codeforces</a>
-        <a href="Dharshan_CV.pdf" target="_blank" rel="noopener noreferrer" class="footer-link-green">Resume</a>
-      </div>
-    </footer>
-
-  </div>
-
-  <script src="script/projects.js"></script>
-  <script src="script/writings.js"></script>
-  <script src="script/script.js"></script>
-</body>
+    <script src="script/projects.js"></script>
+    <script src="script/writings.js"></script>
+    <script src="script/script.js"></script>
+  </body>
 </html>

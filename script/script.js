@@ -49,6 +49,7 @@
   let panelElements = [];
   let paginationElements = [];
   let sidebarEl;
+  let sidebarToggleEl;
 
   // Live Quote Data (AnimeChan API)
   const QUOTES_API = "https://api.animechan.io/v1/quotes/random";
@@ -62,6 +63,7 @@
   function init() {
     sidebarEl = document.getElementById("sidebar");
     mainPanelContent = document.getElementById("main-panel-content");
+    sidebarToggleEl = document.getElementById("sidebar-toggle");
 
     panelElements = SECTIONS.map((s) => document.getElementById(s.id));
     paginationElements = [
@@ -72,6 +74,7 @@
 
     populateSidebarLists();
     attachEventListeners();
+    restoreSidebarState();
 
     if (window.location.hash) {
       handleHashChange();
@@ -446,12 +449,60 @@
     `;
   }
 
+  // --- Collapsible Sidebar ---
+  const SIDEBAR_KEY = "portfolio:sidebar-collapsed";
+
+  function setSidebarCollapsed(collapsed) {
+    if (!sidebarEl) return;
+    sidebarEl.classList.toggle("collapsed", collapsed);
+
+    if (sidebarToggleEl) {
+      sidebarToggleEl.innerHTML = collapsed ? "&#9654;" : "&#9664;";
+      sidebarToggleEl.setAttribute("aria-expanded", String(!collapsed));
+      const label = collapsed ? "Expand sidebar" : "Collapse sidebar";
+      sidebarToggleEl.setAttribute("aria-label", label);
+      sidebarToggleEl.setAttribute("title", label);
+    }
+
+    try {
+      localStorage.setItem(SIDEBAR_KEY, collapsed ? "1" : "0");
+    } catch (err) {
+      /* storage unavailable - state is simply not persisted */
+    }
+  }
+
+  function isSidebarCollapsed() {
+    return !!(sidebarEl && sidebarEl.classList.contains("collapsed"));
+  }
+
+  function toggleSidebar(forceCollapsed) {
+    const next =
+      typeof forceCollapsed === "boolean"
+        ? forceCollapsed
+        : !isSidebarCollapsed();
+    setSidebarCollapsed(next);
+  }
+
+  function restoreSidebarState() {
+    let saved = null;
+    try {
+      saved = localStorage.getItem(SIDEBAR_KEY);
+    } catch (err) {
+      saved = null;
+    }
+    setSidebarCollapsed(saved === "1");
+  }
+
   // Attach Mouse & Keyboard Event Listeners
   function attachEventListeners() {
     // 1. Sidebar Panel Click Listeners
     panelElements.forEach((panel, idx) => {
       if (!panel) return;
       panel.addEventListener("click", () => {
+        // Clicking a section while collapsed should reveal the content
+        if (isSidebarCollapsed()) {
+          toggleSidebar(false);
+        }
         selectSection(idx);
       });
     });
@@ -481,6 +532,9 @@
       } else if (key === "PageUp") {
         e.preventDefault();
         scrollMain(-window.innerHeight * 0.45);
+      } else if (key === "Tab") {
+        e.preventDefault();
+        toggleSidebar();
       }
     });
 
@@ -496,6 +550,14 @@
 
     // 4. Hash Routing Listener
     window.addEventListener("hashchange", handleHashChange);
+
+    // 5. Sidebar Collapse Toggle
+    if (sidebarToggleEl) {
+      sidebarToggleEl.addEventListener("click", (e) => {
+        e.stopPropagation();
+        toggleSidebar();
+      });
+    }
   }
 
   function handleHashChange() {
