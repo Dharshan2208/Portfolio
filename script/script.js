@@ -9,15 +9,15 @@
       intro: [
         `Hi, I'm <span class="text-blue">Dharshan</span>.`,
         `A <span class="text-orange">computer science student</span> @ Amrita Vishwa Vidyapeetham`,
-        `My primary interests lie in <span class="text-pink">backend systems</span>, distributed architectures, and building reliable, scalable systems.`,
-        `I enjoy working with <span class="text-orange">Go</span>, exploring system design, developer tooling, and agentic AI applications.`,
+        `My primary interests lie in <span class="text-purple">backend systems</span>, <span class="text-purple">distributed architectures</span>, and <span class="text-purple">scalable systems</span>.`,
+        `I enjoy working with <span class="text-yellow">Go</span>, exploring <span class="text-cyan">system design</span>, <span class="text-cyan">developer tooling</span>, and <span class="text-cyan">agentic AI</span> applications.`,
         `From building backend services to experimenting with AI powered tools, I like turning ideas into practical, working software or maybe some experimentational projects.`,
-        `I also practice competitive programming on <a href="https://codeforces.com/profile/chifuyu22" target="_blank" rel="noopener noreferrer" class="text-blue">Codeforces</a>.`,
-        `Feel free to connect with me on <a href="https://www.linkedin.com/in/Dharshan2208/" target="_blank" class="text-pink">LinkedIn</a> or explore my projects on <a href="https://github.com/Dharshan2208" target="_blank" class="text-blue">GitHub</a>.`,
+        `I also practice competitive programming on <a href="https://codeforces.com/profile/chifuyu22" target="_blank" rel="noopener noreferrer" class="text-yellow">Codeforces</a>.`,
+        `Feel free to connect with me on <a href="https://www.linkedin.com/in/Dharshan2208/" target="_blank" class="text-blue">LinkedIn</a> or explore my projects on <a href="https://github.com/Dharshan2208" target="_blank" class="text-offwhite">GitHub</a>.`,
         `Grab a copy of my <a href="Dharshan_CV.pdf" target="_blank" rel="noopener noreferrer" class="text-green">Resume</a>.`,
       ],
       instructions: [
-        `<span class="text-pink">Click</span> on any section in the sidebar to inspect past <span class="text-blue">projects</span> and <span class="text-orange">writings</span>.`,
+        `Click on any section in the sidebar to inspect past projects and writings.`,
         `You can also navigate through sections using the <span class="text-blue">arrow keys</span>.`,
       ],
       quote: {

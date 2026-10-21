@@ -1,24 +1,24 @@
 :root {
-  --clr-bg-primary: #0d1117;
+  --clr-bg-primary: #0b0f17;
   --clr-bg-surface: #141a24;
   --clr-bg-hover: #161b22;
-  --clr-bg-active: #1e4273;
+  --clr-bg-active: #1b3a6b;
   --clr-bg-badge: #1f242c;
 
   --clr-text-primary: #c9d1d9;
-  --clr-text-muted: #8b949e;
+  --clr-text-muted: #7d8799;
   --clr-text-dim: #555e69;
 
-  --clr-border: #30363d;
+  --clr-border: #1f2a3d;
   --clr-border-active: #58a6ff;
 
   --clr-blue: #58a6ff;
-  --clr-cyan: #79c0ff;
-  --clr-orange: #ec8e2c;
-  --clr-pink: #bc8cff;
-  --clr-yellow: #e3b341;
+  --clr-cyan: #56d4dd;
+  --clr-orange: #ffb454;
+  --clr-purple: #bc8cff;
+  --clr-yellow: #f2cc60;
   --clr-green: #7ee787;
-
+  --clr-offwhite: #ff7b9c;
   --font-mono:
     SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New",
     monospace;
@@ -92,11 +92,11 @@ button {
 .text-orange {
   color: var(--clr-orange);
 }
-.text-pink {
-  color: var(--clr-pink);
-}
 .text-purple {
-  color: var(--clr-pink);
+  color: var(--clr-purple);
+}
+.text-offwhite {
+  color: var(--clr-offwhite);
 }
 .text-yellow {
   color: var(--clr-yellow);
@@ -661,8 +661,14 @@ button {
   color: var(--clr-blue);
 }
 
-.footer-link-pink {
-  color: var(--clr-pink);
+.footer-link-purple {
+  color: var(--clr-purple);
+}
+.footer-link-offwhite {
+  color: var(--clr-offwhite);
+}
+.footer-link-yellow {
+  color: var(--clr-yellow);
 }
 
 .footer-link-green {
@@ -674,8 +680,9 @@ button {
 }
 
 .footer-link-blue:hover,
-.footer-link-pink:hover,
+.footer-link-purple:hover,
 .footer-link-green:hover,
+.footer-link-offwhite:hover,
 .footer-link-cyan:hover {
   text-decoration: underline;
 }
